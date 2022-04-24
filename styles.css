@@ -1,5 +1,6 @@
 .bodystyle {
-  background-color: #0B0C10;
+  background-color: #0B0C10; /* #0B0C10 */
+  padding: 20px;
 }
 
 .header {
@@ -11,7 +12,7 @@
 /* Breadcrumb */
 ul.breadcrumb {
   font-size: 0px; /* Distance between Breadcrumb and Image */
-  font-family: "Advent Pro";
+  font-family: "Jura";
   padding: 10px 16px;
   background-color: #1F2833;
 }
@@ -39,3 +40,52 @@ ul.breadcrumb li a:hover {
   color: #45A29E;
   text-decoration: underline;
 } /* Add a color on mouse-over */
+
+* {
+  box-sizing: border-box;
+}
+
+.mainpages {
+  margin: 8px -16px;
+}
+
+.mainboxes {
+  float: left;
+  width: 20%;
+}
+
+.mainpages,
+.mainpages > .mainboxes {
+  padding: 8px;
+}
+
+.content {
+  background-color: #1F2833;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.maintext {
+    font-family: "Jura";
+    color: #66FCF1;
+    text-align: center;
+    font-size: 20px;
+} /* Font for Main Pages */
+
+.mainimage {
+
+} /* Images for Main Pages */
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .mainboxes {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .mainboxes {
+    width: 100%;
+  }
+}
