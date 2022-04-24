@@ -1,0 +1,41 @@
+.bodystyle {
+  background-color: #0B0C10;
+}
+
+.header {
+  width: 100%;
+  height: 100%;
+  padding-top: 0px;
+}
+
+/* Breadcrumb */
+ul.breadcrumb {
+  font-size: 0px; /* Distance between Breadcrumb and Image */
+  font-family: "Advent Pro";
+  padding: 10px 16px;
+  background-color: #1F2833;
+}
+
+ul.breadcrumb li {
+  display: inline;
+  font-size: 15px;
+} /* Display breadcrumbs side by side */
+
+
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: #66FCF1;
+  content: "/ ";
+} /* Add a slash symbol */
+
+
+ul.breadcrumb li a {
+  color: #66FCF1;
+  text-decoration: none;
+} /* Add a color to all links inside the list */
+
+
+ul.breadcrumb li a:hover {
+  color: #45A29E;
+  text-decoration: underline;
+} /* Add a color on mouse-over */
