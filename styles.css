@@ -1,5 +1,14 @@
+/* Main Colors:
+#0B0C10 Black
+#1F2833 Gray
+#C5C6C7 Light Gray
+#66FCF1 Blue Green
+#45A29E Darker Blue Green
+#141820 Slightly Darker Black */
+
+/* -------------------- Styles for all pages -------------------- */
 .bodystyle {
-  background-color: #0B0C10; /* #0B0C10 */
+  background-color: #0B0C10;
   padding: 15px;
 }
 
@@ -8,7 +17,19 @@
   height: 100%;
 }
 
-/* Breadcrumb */
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  float: left;
+}
+
+.align-right {
+  float: right;
+}
+/* -------------------- Styles breadcrumbs -------------------- */
 ul.breadcrumb {
   font-size: 0px; /* Distance between dreadcrumb and banner */
   font-family: "Jura";
@@ -37,9 +58,10 @@ ul.breadcrumb li a:hover {
   text-decoration: underline;
 } /* Style on breadcrumbs hover */
 
+/* -------------------- Styles for main page selection -------------------- */
 .mainpages {
   margin: 8px -21px;
-} /* Margin of all main page selection */
+}
 
 .mainboxes:hover {
   transform: scale(1.05);
@@ -85,4 +107,66 @@ ul.breadcrumb li a:hover {
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .mainboxes {width: 100%;}
+}
+
+/* -------------------- Styles for tables -------------------- */
+.styled-table {
+  overflow-x:auto;
+  border-collapse: collapse;
+  width: 100%;
+  font-family: "Jura";
+  color: #F0FFFF;
+  min-width: 400px;
+  background-color:#141820;
+}
+
+.styled-table tr th{
+  background-color: #1E90FF;
+  color: #000000;
+  text-align: left;
+  font-family: "Jura";
+}
+
+.styled-table th {
+  padding: 12px 15px;
+}
+.styled-table td {
+  padding: 12px 15px;
+  font-family: "Jura";
+}
+
+.unowned {
+  color: #FF0000
+} /* Color of ✕ */
+
+.owned {
+  color: #7CFC00;
+} /* Color of ✔ */
+
+/* -------------------- Style of filter function -------------------- */
+.title-search div {
+  display: inline-block;
+}
+
+.page-title {
+  font-size: 30px;
+  font-family: "Jura";
+  color: #66FCF1;
+  margin: 15px
+}
+
+::placeholder {
+  color: #45A29E;
+  opacity: 1;
+} /* Style of text inside the search box*/
+
+#search-bar {
+  color: #66FCF1;
+  font-family: "Jura";
+  background-color: #1F2833;
+  font-size: 15px;
+  padding: 15px;
+  border: 1px solid #C5C6C7;
+  border-radius: 7px;
+  margin-bottom: 12px;
 }
