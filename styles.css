@@ -168,5 +168,6 @@ ul.breadcrumb li a:hover {
   padding: 15px;
   border: 1px solid #C5C6C7;
   border-radius: 7px;
+  margin-top: 12px;
   margin-bottom: 12px;
 }
