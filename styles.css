@@ -29,6 +29,16 @@
 .align-right {
   float: right;
 }
+
+.page-title {
+  font-size: 30px;
+  font-family: "Montserrat";
+  color: #66FCF1;
+  margin: 15px
+}
+
+img {color:#fff} /* Sets image ALT text to white */
+
 /* -------------------- Styles breadcrumbs -------------------- */
 ul.breadcrumb {
   font-size: 0px; /* Distance between dreadcrumb and banner */
@@ -63,31 +73,31 @@ ul.breadcrumb li a:hover {
   margin: 8px -21px;
 }
 
-.mainboxes:hover {
+.main-relation:hover {
   transform: scale(1.05);
   cursor: pointer;
   text-decoration: underline 1%;
 } /* Enlarges main boxes on hover*/
 
-.mainboxes {
+.main-relation {
   float: left;
   width: 20%;
   box-sizing: border-box;
 } /* Makes main boxes same shape and centered */
 
 .mainpages,
-.mainpages > .mainboxes {
+.mainpages > .main-relation{
   padding: 12px;
 } /* Padding between columns */
 
-.content {
+.main-boxes {
   background-color: #1F2833;
   padding: 10px;
   border-radius: 15px;
 } /* Size of the main boxes */
 
 .maintext, .maintext a {
-    font-family: "Jura";
+    font-family: "Montserrat";
     color: #66FCF1;
     text-align: center;
     font-size: 15px;
@@ -99,19 +109,17 @@ ul.breadcrumb li a:hover {
   border-radius: 15px;
 } /* Images for main page selection */
 
-/* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 900px) {
   .mainboxes {width: 50%;}
-}
+} /* Responsive layout - makes a two column-layout instead of four columns */
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   .mainboxes {width: 100%;}
-}
+} /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 
 /* -------------------- Styles for tables -------------------- */
 .styled-table {
-  overflow-x:auto;
+  overflow:auto;
   border-collapse: collapse;
   width: 100%;
   font-family: "Jura";
@@ -148,13 +156,6 @@ ul.breadcrumb li a:hover {
   display: inline-block;
 }
 
-.page-title {
-  font-size: 30px;
-  font-family: "Jura";
-  color: #66FCF1;
-  margin: 15px
-}
-
 ::placeholder {
   color: #45A29E;
   opacity: 1;
@@ -170,4 +171,120 @@ ul.breadcrumb li a:hover {
   border-radius: 7px;
   margin-top: 12px;
   margin-bottom: 12px;
+}
+
+/* -------------------- Styles for Achievements -------------------- */
+.achieve-selection{
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 10px;
+}
+
+.achieve-selection .achieve-boxes{
+  flex: 25%;
+  padding: 5px;
+  border: 3px solid #1F2833;
+  background-color: #141820;
+  padding: 2px;
+  border-radius: 7px;
+  box-sizing: border-box;
+}
+
+.achieve-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 5px;
+}
+
+.achieve-boxes .achieve-contents {
+  flex: 50%;
+  box-sizing: border-box;
+}
+
+div.achieve-contents:nth-of-type(odd){
+  flex: 5;
+}
+
+.achieve-contents {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.achieve-contents img {
+  max-width:100%;
+  border-radius: 7px
+}
+
+.game-title {
+  flex: 10%;
+  color: white;
+  margin-left: 5px;
+  margin-top: 5px;
+  font-family: "Jura";
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+.game-status {
+  flex: 10%;
+  color: #C5C6C7;
+  margin-left: 5px;
+  margin-top: -15px;
+  font-family: "Jura";
+  font-size: 15px;
+  box-sizing: border-box;
+  margin-bottom: 0px;
+}
+
+.ongoing {
+  flex: 10%%;
+  color: Yellow;
+  box-sizing: border-box;
+  margin-bottom: 0px;
+}
+
+.standby {
+  flex: 10%%;
+  color: #e77021;
+  box-sizing: border-box;
+  margin-bottom: 0px;
+}
+
+.completed {
+  flex: 10%%;
+  color: #7CFC00;
+  box-sizing: border-box;
+  margin-bottom: 0px;
+}
+
+.aborted {
+  flex: 10%%;
+  color: #FF0000;
+  box-sizing: border-box;
+  margin-bottom: 0px;
+}
+
+.achieve-album {
+  flex: 10%%;
+  margin-bottom: 5px;
+  font-size: 12px;
+  font-family: "Jura";
+  text-decoration: none;
+  margin-left: 5px;
+  color: #C5C6C7;
+  box-sizing: border-box;
+}
+
+.achieve-album:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  .achieve-selection {
+    flex-direction: column;
+  }
 }
