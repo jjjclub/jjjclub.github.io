@@ -1,14 +1,16 @@
 /* Main Colors:
 #0B0C10 Black
+#121212 Slightly Lighter Black
 #1F2833 Gray
 #C5C6C7 Light Gray
-#66FCF1 Blue Green
-#45A29E Darker Blue Green
+#66FCF1 Light Blue
+#45A29E Darker Light Blue
+#1E90FF Blue
 #141820 Slightly Darker Black */
 
 /* -------------------- Styles for all pages -------------------- */
 .bodystyle {
-  background-color: #0B0C10;
+  background-color: #141820;
   padding: 15px;
 }
 
@@ -38,6 +40,29 @@
 }
 
 img {color:#fff} /* Sets image ALT text to white */
+
+/* -------------------- Scrollbar -------------------- */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #71838e;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #515e66;
+}
 
 /* -------------------- Styles breadcrumbs -------------------- */
 ul.breadcrumb {
@@ -194,7 +219,6 @@ ul.breadcrumb li a:hover {
 
 .achieve-boxes {
   display: flex;
-  flex-wrap: wrap;
   column-gap: 5px;
 }
 
@@ -210,7 +234,6 @@ div.achieve-contents:nth-of-type(odd){
 .achieve-contents {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
 }
 
 .achieve-contents img {
@@ -219,24 +242,39 @@ div.achieve-contents:nth-of-type(odd){
 }
 
 .game-title {
-  flex: 10%;
-  color: white;
+  flex-grow: 1;
   margin-left: 5px;
   margin-top: 5px;
+}
+
+.game-title a {
   font-family: "Jura";
   font-size: 20px;
-  box-sizing: border-box;
+  text-decoration: none;
+  color: #66FCF1;
+}
+
+.game-title a:hover {
+  color: #45A29E;
+  text-decoration: 1px underline;
+}
+
+.achieve-date {
+  margin-top: -12px;
+  margin-bottom: 5px;
+  color: #C5C6C7;
+  font-size: 12px;
+  font-family: "Jura";
+  text-decoration: none;
+  margin-left: 5px;
 }
 
 .game-status {
-  flex: 10%;
-  color: #C5C6C7;
   margin-left: 5px;
-  margin-top: -15px;
+  margin-top: -45px;
+  color: #C5C6C7;
   font-family: "Jura";
   font-size: 15px;
-  box-sizing: border-box;
-  margin-bottom: 0px;
 }
 
 .ongoing {
@@ -267,24 +305,14 @@ div.achieve-contents:nth-of-type(odd){
   margin-bottom: 0px;
 }
 
-.achieve-album {
-  flex: 10%%;
-  margin-bottom: 5px;
-  font-size: 12px;
-  font-family: "Jura";
-  text-decoration: none;
-  margin-left: 5px;
-  color: #C5C6C7;
-  box-sizing: border-box;
-}
-
-.achieve-album:hover {
-  color: white;
-  text-decoration: underline;
-}
-
 @media (max-width: 800px) {
   .achieve-selection {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 800px) {
+  .page-title {
+    text-align: center;
   }
 }
