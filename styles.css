@@ -102,6 +102,7 @@ ul.breadcrumb li a:hover {
   transform: scale(1.05);
   cursor: pointer;
   text-decoration: underline 1%;
+  transition: 0.4s;
 } /* Enlarges main boxes on hover*/
 
 .main-relation {
