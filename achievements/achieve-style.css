@@ -1,0 +1,71 @@
+.achieve-layout {
+  display: flex;
+  column-gap: 10px;
+  margin-top: 10px;
+}
+
+.achieve-layout .achieve-flexbox {
+  background-color: #141820;
+}
+
+.achieve-flexbox {
+  width: 100%;
+  flex-basis: 45%;
+}
+
+.achieve-flexbox img {
+  max-width: 100%;
+}
+
+.achieve-flexbox2 {
+  width: 100%;
+  font-family: "Jura";
+  color: #66FCF1;
+}
+
+.achieve-innerflexbox {
+  display: flex;
+  flex-direction: row;
+}
+
+.achieve-duraRema {
+  flex-basis: 70%;
+}
+
+.achieve-gametitle h1 {
+  font-size: 30px;
+}
+
+.achieve-members {
+  font-size: 20px;
+}
+
+.achieve-duration {
+}
+
+.achieve-remarks {
+}
+
+.achieve-status {
+  flex-grow: 1;
+}
+
+.achieve-status p {
+  font-size: 30px;
+  background-color: red;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .achieve-layout {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 900px) {
+  .achieve-innerflexbox {
+    flex-direction: column;
+  }
+}
