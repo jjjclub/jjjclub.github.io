@@ -1,0 +1,54 @@
+body {
+  background-color: #161616;
+  color: #dcddde;
+  font-family: "Segoe UI";
+  margin-left:20%;
+  margin-right:20%;
+  font-size:20px;
+}
+
+a {
+  color: #7965D5;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: #9385D3;
+}
+
+.banner {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: -20px;
+}
+
+.file{
+  color: #686A6C;
+}
+
+.bold {
+  color: #2f8734;
+}
+
+/* Table style */
+.styled-table {
+  overflow:auto;
+  width: 100%;
+  font-size: 18px;
+  background-color: #171717;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2)
+}
+
+.styled-table tr th{
+  background-color: #6757B2;
+  color: #000000;
+  text-align: left;
+}
+
+.styled-table th {
+  padding: 8px 9px;
+}
+.styled-table td {
+  padding: 8px 9px;
+}
