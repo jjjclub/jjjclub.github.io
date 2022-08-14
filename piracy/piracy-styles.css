@@ -1,0 +1,115 @@
+body {
+  background-color: #161616;
+  color: #dcddde;
+  font-family: "Segoe UI";
+  margin-left:20%;
+  margin-right:20%;
+  font-size:20px;
+}
+
+a {
+  color: #7965D5;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: #9385D3;
+}
+
+.banner {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: -20px;
+}
+
+
+.file { /* Callout for certain words */
+  color: #686A6C;
+}
+
+.return-catalog {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Table style */
+.styled-table {
+  overflow:auto;
+  width: 100%;
+  font-size: 18px;
+  background-color: #171717;
+  border-collapse: collapse;
+  border-radius: 15.8px;
+  box-shadow: 6px 7px 8px 0.5px rgba(0, 0, 0, 12)
+}
+
+.styled-table tr th{
+  background-color: #6757B2;
+  color: #000000;
+  text-align: left;
+  border-radius: 15px 0px 0px 0px;
+}
+
+.styled-table tr th:nth-child(2) { /* Makes second column have a top-right border-radius */
+  border-radius: 0px 15px 0px 0px;
+}
+
+
+.styled-table tr th:first-child { /* Ensures 1st column is always 30% width */
+  width:30%;
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 8px 9px;
+}
+
+.footnote {
+  font-size: 14px;
+}
+
+.footer {
+  font-size: 15px;
+}
+
+.footer ul {
+  list-style: none;
+  padding-left: 0px;
+  margin-top: 75px;
+  margin-bottom: -4px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer li {
+  margin: 0px 10px 0px 10px;
+}
+
+/* Responsive Details */
+@media (max-width: 800px) {
+  body {
+    margin-left:5%;
+    margin-right:5%;
+    font-size: 16px;
+  }
+
+  .styled-table {
+    font-size: 16px;
+  }
+
+  .footnote {
+    font-size: 10px;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    margin-left:5%;
+    margin-right:5%;
+  }
+}
