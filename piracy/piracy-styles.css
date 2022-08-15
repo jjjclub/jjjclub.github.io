@@ -2,29 +2,70 @@ body {
   background-color: #161616;
   color: #dcddde;
   font-family: "Segoe UI";
+  font-size:20px;
+}
+
+nav {
+  font-family: "Silkscreen";
+  margin-top: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  list-style: none;
+  display: flex;
+  column-gap: 20px;
+  align-items: center;
+  padding-left: 0%;
+}
+
+.logo {
+  width: 60px;
+}
+
+.logo:hover {
+  transform: scale(1.10);
+}
+
+.socials {
+  margin-left: auto;
+  text-align: center;
+}
+
+.socials ul {
+  list-style: none;
+  padding-left: 0px;
+  display: flex;
+  column-gap: 18px;
+  align-items: center;
+}
+
+.socials a {
+  text-decoration: none;
+}
+
+.socials a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+article {
   margin-left:20%;
   margin-right:20%;
-  font-size:20px;
 }
 
 a {
   color: #7965D5;
-  text-underline-offset: 3px;
-}
-
-a:hover {
-  color: #9385D3;
+  text-underline-offset: 4px;
 }
 
 .banner {
+  border-radius: 15px;
   width: 100%;
-  margin-top: 20px;
   margin-bottom: -20px;
 }
 
 
 .file { /* Callout for certain words */
-  color: #686A6C;
+  color: #858585;
 }
 
 .return-catalog {
@@ -73,7 +114,11 @@ a:hover {
 }
 
 .footer {
-  font-size: 15px;
+  font-size: 20px;
+}
+
+.footer a {
+  text-decoration: none;
 }
 
 .footer ul {
@@ -86,14 +131,102 @@ a:hover {
 }
 
 .footer li {
-  margin: 0px 10px 0px 10px;
+  margin: 0px 15px 0px 15px;
+}
+
+/* Not My Code */
+.tooltip li {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip li .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-size: 12px;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+/* End of Not My Code */
+
+.tooltip li:hover .tooltiptext {
+  visibility: visible;
 }
 
 /* Responsive Details */
 @media (max-width: 800px) {
-  body {
+  article {
+    margin-left:13%;
+    margin-right:13%;
+    font-size: 18px;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav .logo {
+    width: 50px;
+  }
+
+  nav h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .socials {
+    margin-left: 0%;
+    margin-right: 0%;
+    font-size: 18px
+  }
+
+  .styled-table {
+    font-size: 18px;
+  }
+
+  .footer {
+    font-size: 16px;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 600px) {
+  article {
     margin-left:5%;
     margin-right:5%;
+    font-size: 16px;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  .socials {
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+
+  nav .logo {
+    width: 50px;
+  }
+
+  nav h1 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .socials {
+    margin-left: 0%;
+    margin-right: 0%;
     font-size: 16px;
   }
 
@@ -101,15 +234,8 @@ a:hover {
     font-size: 16px;
   }
 
-  .footnote {
-    font-size: 10px;
+  .footer {
+    font-size: 14px;
     text-align: justify;
-  }
-}
-
-@media (max-width: 600px) {
-  body {
-    margin-left:5%;
-    margin-right:5%;
   }
 }
