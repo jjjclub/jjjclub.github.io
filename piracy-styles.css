@@ -74,7 +74,7 @@ a:hover {
 
 
 code { /* Callout for certain words */
-  color: #858585;
+  color: #737373;
 }
 
 .return-catalog {
@@ -86,7 +86,7 @@ code { /* Callout for certain words */
   text-align: center;
 }
 
-/* Table style */
+/* Table style in specific Piracy Catalog entries*/
 .styled-table {
   overflow:auto;
   width: 100%;
@@ -116,6 +116,47 @@ code { /* Callout for certain words */
 .styled-table th,
 .styled-table td {
   padding: 8px 9px;
+}
+
+
+/* Styles for the Piracy Catalog main page */
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-left: 0px;
+  box-sizing: border-box;
+  column-gap: 15px;
+  justify-content: center;
+}
+
+.catalog-container {
+  display: inherit;
+  flex-direction: column;
+  column-gap: 15px;
+  width: 15%;
+}
+
+.catalog-text {
+  display: inherit;
+  flex-grow: 2;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: -10px;
+  font-family: "Inter";
+  font-size: 14px;
+  text-align: center;
+}
+
+.box-art img {
+  width: 100%;
+  background-color: #1D1D1D;
+  border-radius: 6px;
+  box-shadow: 3px 4px 5px 0.5px rgba(0, 0, 0, 12);
+}
+
+.box-art a img:hover {
+  transform: scale(1.05);
 }
 
 .footnote {
@@ -210,6 +251,10 @@ code { /* Callout for certain words */
     font-size: 16px;
     text-align: justify;
   }
+
+  .catalog-text {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -254,5 +299,13 @@ code { /* Callout for certain words */
   .footer {
     font-size: 14px;
     text-align: justify;
+  }
+
+  .catalog-container {
+    width: 30%;
+  }
+
+  .catalog-text {
+    font-size: 12px;
   }
 }
