@@ -60,25 +60,14 @@ also suggested for styles that only applies to one element, usually a paragraph 
   font-size: 20px;
 }
 
-.game-img {
-  opacity: 10%;
-}
-.game-img:hover {
-  opacity: 100%;
-}
+.game-status p {opacity: 0%;}
+.game-img:hover {opacity: 20%;}
+.game-img:hover + .game-status p {opacity: 100%;}
 
-.aborted .game-status p {
-  color: red;
-}
-.completed .game-status p {
-  color: green;
-}
-.standby .game-status p {
-  color: yellow;
-}
-.ongoing .game-status p {
-  color: lightblue;
-}
+.aborted .game-status p {color: red;}
+.completed .game-status p {color: green;}
+.standby .game-status p {color: yellow;}
+.ongoing .game-status p {color: lightblue;}
 
 
 /* Governs all pages */
