@@ -47,6 +47,7 @@ body {
   column-gap: 20px;
   align-items: center;
   padding-left: 0%;
+  padding-right: 0%;
   font-size: 18px;
 }
 
@@ -306,7 +307,7 @@ code { /* Callout for certain words */
 
 @media (max-width: 600px) {
   .nav-strip {
-    margin: -50px;
+    margin-top: -50px;
   }
 
   .menu {
