@@ -2,89 +2,71 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>JJJ Website Homepage</title>
+    <title>Homepage</title>
+    <link rel="icon" type="image/x-icon" href="images/jjj-logo.png">
+    <link rel="stylesheet" href="styles-v2.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Jura' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen">
+    <script src="https://kit.fontawesome.com/9cc3415277.js" crossorigin="anonymous"></script>
   </head>
-  <body class="bodystyle">
-    <header> <!-- Breadcrumbs-->
-      <ul class="breadcrumb">
-        <li><a href="index.html">HOMEPAGE</a></li>
-      </ul>
-      <img src="images/main-banner.png" alt="JJJ Banner" class="header" >
-    </header>
-    <article class="mainpages"> <!-- Main Page Selection -->
-      <div class="main-relation">
-        <a href="mainpages/achievements.html" class="maintext">
-          <div class="main-boxes">
-            <img src="images/achievements-banner.png" alt="Achievements" class="mainimage">
-            <p>ACHIEVEMENTS</p>
+  <body>
+    <nav>
+      <div class="home-nav">
+        <img class="image" src="images/home-banner.png" alt="Home Banner">
+        <div class="nav-strip">
+          <div class="menu">
+            <img class="home-logo" src="images/jjj-logo.png" alt="JJJ Logo">
+            <h1>Homepage</h1>
+            <div class="flex-grow"></div>
+            <div class="socials">
+                <ul class="tooltip">
+                  <li>
+                    <a href="https://discord.gg/npRN2KqTp8" target="_blank">
+                    <i class="fa-brands fa-discord"></i>
+                    <span class="tooltiptext">Discord</span></a>
+                  </li>
+                  <li>
+                    <a href="https://www.youtube.com/channel/UCiwD3fusntkhfdU45G-_8GA" target="_blank">
+                    <i class="fa-brands fa-youtube"></i>
+                    <span class="tooltiptext">Youtube</span></a>
+                  </li>
+                  <li>
+                    <a href="https://drive.google.com/drive/folders/1niYy2ZfIGwD9vCLXrpqZ0DC9jlTIdve1?usp=sharing" target="_blank">
+                    <i class="fa-brands fa-google-drive">
+                    </i><span class="tooltiptext">Google Drive</span></a>
+                  </li>
+                </ul>
+            </div>
           </div>
-        </a>
+        </div>
       </div>
-      <div class="main-relation">
-        <a href="mainpages/gamesmasterlist.html" class="maintext">
-          <div class="main-boxes">
-            <img src="images/games-masterlist-banner.png" alt="Games Masterlist" class="mainimage">
-            <p>GAMES MASTERLIST</p>
-          </div>
-        </a>
+    </nav>
+    <main>
+      <div class="home-main">
+        <h1>Official JJJ Website</h1>
+        <p style="font-family:Silkscreen; color:#DDD964; text-align:center; padding-top: 60px;">Currently in Construction <br>
+          <a href="mainpages/piracy-catalog.html">Piracy Catalog</a></p>
       </div>
-      <div class="main-relation">
-        <a href="mainpages/recommendations.html" class="maintext">
-          <div class="main-boxes">
-            <img src="images/recommendations-banner.png" alt="Recommendations" class="mainimage">
-            <p class="maintext">RECOMMENDATION</p>
-          </div>
-        </a>
-      </div>
-      <div class="main-relation">
-        <a href="mainpages/adminstration.html" class="maintext">
-          <div class="main-boxes">
-            <img src="images/adminstration-banner.png" alt="Adminstration" class="mainimage">
-            <p class="maintext">ADMINISTRATION</p>
-          </div>
-        </a>
-      </div>
-      <div class="main-relation">
-        <a href="mainpages/piracy-catalog.html" class="maintext">
-          <div class="main-boxes">
-            <img src="images/pirate-bay-banner.png" alt="Pirate Bay" class="mainimage">
-            <p class="maintext">PIRATE BAY</p>
-          </div>
-        </a>
-      </div>
-      <div class="main-relation">
-        <a href="mainpages/theater.html" class="maintext">
-          <div class="main-boxes">
-            <img src="images/theater-banner.png" alt="Theater" class="mainimage">
-            <p class="maintext">THEATER</p>
-          </div>
-        </a>
-      </div>
-      <div class="main-relation">
-        <a href="mainpages/library.html" class="maintext">
-          <div class="main-boxes">
-            <img src="images/library-banner.png" alt="Library" class="mainimage">
-            <p class="maintext">LIBRARY</p>
-          </div>
-        </a>
-      </div>
-      <div class="main-relation">
-        <a href="mainpages/projects.html" class="maintext">
-          <div class="main-boxes">
-            <img src="images/projects-banner.png" alt="Projects" class="mainimage">
-            <p class="maintext">PROJECTS</p>
-          </div>
-        </a>
-      </div>
-    </article>
-    <a href="piracy\dying-light-2.html" style="color:#141820">Staff Only</a>
+    </main>
   </body>
-  <footer>
-
+  <footer class="footer">
+    <ul  class="tooltip">
+      <li>
+        <a href="contact-us.html">
+        <i class="fa-solid fa-envelope"></i>
+        <span class="tooltiptext">Contact Us</span></a>
+      </li>
+      <li>
+        <a href="about-us.html">
+        <i class="fa-solid fa-users"></i>
+        <span class="tooltiptext">About Us</span></a>
+      </li>
+      <li>
+        <a href="https://forms.gle/c3qW1wx6KMNfFKTL9" target="_blank">
+        <i class="fa-solid fa-bug"></i>
+        <span class="tooltiptext">Report a Problem</span></a>
+      </li>
+    </ul>
+    <p class="text-center">© 2022 JJJ</p>
   </footer>
 </html>

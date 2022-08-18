@@ -1,11 +1,43 @@
+/*
+General rule for css organization is putting the specific classes in its order in the
+html docuement (e.g., .nav will be in top and .footer will be bottom of the css page).
+
+Since some aspects of the code will frequently be used between pages, it is good practice
+to put the "origin class" if the css is used only in a particular page. If not, then just
+put the class name directly (e.g., ".home-nav .image {}" will only be used in the Image under the Homepage
+Navigation. But ".menu{}" can be used in any navigation part of a page across the website).
+
+If a particular style is temporary, then it is better to put it directy in the html file. This is
+also suggested for styles that only applies to one element, usually a paragraph or an h1 title
+(e.g., "Currently in Contruction" messages).
+*/
+
+/* Governs all pages */
+html, body {
+    margin:0;
+    padding:0;
+}
+
 body {
   background-color: #161616;
   color: #dcddde;
-  font-size: 20px;
   font-family: "Segoe UI";
 }
 
-nav {
+/* All about the Navigation portion above all the pages */
+.home-nav .image { /* Used to place the main banner behind the navigation/body */
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  opacity: 20%
+}
+
+.home-nav .nav-strip {
+  position: relative;
+  top: 10vh;
+}
+
+.menu{
   font-family: "Silkscreen";
   margin-top: 20px;
   margin-left: 10%;
@@ -15,10 +47,12 @@ nav {
   column-gap: 20px;
   align-items: center;
   padding-left: 0%;
+  font-size: 18px;
 }
 
+.home-logo,
 .logo {
-  width: 60px;
+  width: 75px;
 }
 
 .logo:hover {
@@ -29,8 +63,8 @@ nav {
   display: flex;
   column-gap: 18px;
   align-items: center;
-  margin-right: 0%;
   text-align: center;
+  font-size: 18px;
 }
 
 .socials ul {
@@ -52,9 +86,19 @@ nav {
   text-underline-offset: 4px;
 }
 
-article {
+/* All about the main area the users will be looking at */
+main {
   margin-left:20%;
   margin-right:20%;
+  font-size: 18px;
+}
+
+.home-main {
+  position: relative;
+  margin-top: 20vh;
+  font-family: "Silkscreen";
+  color: #DDD964;
+  text-align: center;
 }
 
 a {
@@ -66,24 +110,22 @@ a:hover {
   color: #9D92D3;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .banner {
   border-radius: 15px;
   width: 100%;
   margin-bottom: -20px;
 }
 
-
 code { /* Callout for certain words */
   color: #737373;
 }
 
-.return-catalog {
-  text-align: center;
-  margin-top: 50px;
-}
-
-.text-center {
-  text-align: center;
+.footnote {
+  font-size: 14px;
 }
 
 /* Table style in specific Piracy Catalog entries*/
@@ -159,10 +201,6 @@ code { /* Callout for certain words */
   transform: scale(1.05);
 }
 
-.footnote {
-  font-size: 14px;
-}
-
 .footer {
   font-size: 18px;
 }
@@ -214,17 +252,12 @@ code { /* Callout for certain words */
 
 /* Responsive Details */
 @media (max-width: 800px) {
-  article {
-    margin-left:13%;
-    margin-right:13%;
-    font-size: 18px;
-  }
-
-  nav {
+  .menu {
     flex-direction: column;
+    font-size: 16px;
   }
 
-  nav .logo {
+  .logo {
     width: 50px;
   }
 
@@ -236,7 +269,17 @@ code { /* Callout for certain words */
   .socials {
     margin-left: 0%;
     margin-right: 0%;
-    font-size: 18px
+    font-size: 16px
+  }
+
+  main {
+    margin-left:13%;
+    margin-right:13%;
+    font-size: 16px;
+  }
+
+  main h1 {
+    font-size: 20px;
   }
 
   .banner {
@@ -245,6 +288,10 @@ code { /* Callout for certain words */
 
   .styled-table {
     font-size: 18px;
+  }
+
+  .footnote {
+    font-size: 12px;
   }
 
   .footer {
@@ -258,14 +305,13 @@ code { /* Callout for certain words */
 }
 
 @media (max-width: 600px) {
-  article {
-    margin-left:5%;
-    margin-right:5%;
-    font-size: 16px;
+  .nav-strip {
+    margin: -50px;
   }
 
-  nav {
+  .menu {
     flex-direction: column;
+    font-size: 14px;
   }
 
   .socials {
@@ -278,7 +324,7 @@ code { /* Callout for certain words */
   }
 
   nav h1 {
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
   }
 
@@ -288,12 +334,26 @@ code { /* Callout for certain words */
     font-size: 16px;
   }
 
+  main {
+    margin-left:5%;
+    margin-right:5%;
+    font-size: 14px;
+  }
+
+  main h1 {
+    font-size: 20px;
+  }
+
   .banner {
     margin-top: 15px;
   }
 
   .styled-table {
     font-size: 16px;
+  }
+
+  .footnote {
+    font-size: 10px;
   }
 
   .footer {
