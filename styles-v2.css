@@ -12,6 +12,75 @@ also suggested for styles that only applies to one element, usually a paragraph 
 (e.g., "Currently in Contruction" messages).
 */
 
+.achieve-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-left: 0px;
+  box-sizing: border-box;
+  column-gap: 15px;
+  justify-content: center;
+}
+
+.achieve-container {
+  display: inherit;
+  flex-direction: column;
+  width: 17%;
+  position: relative;
+  margin-top: 15px;
+}
+
+.achieve-container a {
+  text-decoration: none;
+}
+
+.achieve-container a:hover {
+  transform: scale(1.05);
+}
+
+.achieve-container img {
+  max-height: 480px; /* images should be 320x480 */
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 3px 4px 5px 0.5px rgba(0, 0, 0, 12);
+}
+
+.game-status {
+  display: inherit;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-family: "Silkscreen";
+  font-size: 20px;
+}
+
+.game-img {
+  opacity: 10%;
+}
+.game-img:hover {
+  opacity: 100%;
+}
+
+.aborted .game-status p {
+  color: red;
+}
+.completed .game-status p {
+  color: green;
+}
+.standby .game-status p {
+  color: yellow;
+}
+.ongoing .game-status p {
+  color: lightblue;
+}
+
+
 /* Governs all pages */
 html, body {
     margin:0;
@@ -115,7 +184,7 @@ a:hover {
   text-align: center;
 }
 
-.banner {
+.banner { /* Given by Elwyn for Piracy Catalog */
   border-radius: 15px;
   width: 100%;
   margin-bottom: -20px;
@@ -176,7 +245,6 @@ code { /* Callout for certain words */
 .catalog-container {
   display: inherit;
   flex-direction: column;
-  column-gap: 15px;
   width: 15%;
 }
 
@@ -192,7 +260,7 @@ code { /* Callout for certain words */
 }
 
 .box-art img {
-  width: 100%;
+  width: 100%; /* images should be 1500x500 */
   background-color: #1D1D1D;
   border-radius: 6px;
   box-shadow: 3px 4px 5px 0.5px rgba(0, 0, 0, 12);
@@ -303,6 +371,14 @@ code { /* Callout for certain words */
   .catalog-text {
     font-size: 14px;
   }
+
+  .achieve-container {
+    width: 20%;
+  }
+
+  .game-status {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -367,6 +443,14 @@ code { /* Callout for certain words */
   }
 
   .catalog-text {
+    font-size: 12px;
+  }
+
+  .achieve-container {
+    width: 30%;
+  }
+
+  .game-status {
     font-size: 12px;
   }
 }
