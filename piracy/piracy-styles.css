@@ -1,0 +1,98 @@
+/* Piracy Catalog ========================================================== */
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-left: 0px;
+  box-sizing: border-box;
+  column-gap: 15px;
+  justify-content: center;
+}
+
+.catalog-container {
+  display: inherit;
+  flex-direction: column;
+  width: 15%;
+}
+
+.catalog-text {
+  display: inherit;
+  flex-grow: 2;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: -10px;
+  font-size: 0.75em;
+  text-align: center;
+}
+
+.box-art img {
+  width: 100%; /* images should be 1500x500 */
+  background-color: #1D1D1D;
+  border-radius: 6px;
+  box-shadow: 3px 4px 5px 0.5px rgba(0, 0, 0, 12);
+}
+
+.box-art a img:hover {
+  transform: scale(1.05);
+}
+
+/* Piracy Page ============================================================= */
+.primary-section img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.piracy-table {
+  margin: auto;
+  width: 100%;
+  font-size: 18px;
+  background-color: #171717;
+  border-collapse: collapse;
+  border-radius: 15px;
+  box-shadow: 6px 7px 8px 0.5px rgba(0, 0, 0, 12);
+}
+
+.piracy-table tr th{
+  background-color: #6757B2;
+  color: #000000;
+  text-align: left;
+  border-radius: 15px 0px 0px 0px;
+}
+
+.piracy-table tr th:first-child { /* Ensures 1st column is always 30% width */
+  width: 30%;
+}
+
+.piracy-table tr th:nth-child(2) { /* Makes second column have a top-right border-radius */
+  border-radius: 0px 15px 0px 0px;
+}
+
+.piracy-table th,
+.piracy-table td {
+  padding: 10px;
+}
+
+code {
+  color: #737373;
+}
+
+.footnote {
+  font-size: 0.7em;
+}
+
+/* Mobile Responsive css =================================================== */
+@media (max-width: 600px) {
+
+  .catalog-container {
+    width: 25%;
+  }
+
+  .catalog-text {
+    line-height: 1em;
+    font-size: 0.8em;
+  }
+
+  .piracy-table {
+    font-size: 1em;
+  }
+}

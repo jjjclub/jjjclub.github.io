@@ -1,0 +1,148 @@
+/* Achievements Catalog ==================================================== */
+.achieve-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding-left: 0px;
+  box-sizing: border-box;
+  column-gap: 15px;
+  justify-content: center;
+}
+
+.achieve-container {
+  display: inherit;
+  flex-direction: column;
+  width: 17%;
+  position: relative;
+  margin-top: 15px;
+}
+
+.achieve-container a {
+  text-decoration: none;
+}
+
+.achieve-container a:hover {
+  transform: scale(1.05);
+}
+
+.achieve-container img {
+  max-height: 480px; /* images should be 320x480 */
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 3px 4px 5px 0.5px rgba(0, 0, 0, 12);
+}
+
+.game-status {
+  display: inherit;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  font-family: "Silkscreen";
+  font-size: 0.8em;
+}
+
+.game-status p {opacity: 0%;}
+.game-img:hover {opacity: 10%;}
+.game-img:hover + .game-status p {opacity: 100%;}
+
+.aborted .game-status p {color: red;}
+.completed .game-status p {color: green;}
+.standby .game-status p {color: yellow;}
+.ongoing .game-status p {color: lightblue;}
+
+/* Achievements Page ======================================================= */
+
+.logbook {
+  margin: auto;
+  padding-left: 0px;
+  width: 75%;
+  list-style: none;
+  font-family: "Cutive Mono";
+  color: #00BB00;
+  line-height: 1.3em;
+  background-color: black;
+  border: 3px solid #242424;
+  border-radius: 2px;
+}
+
+.logbook .data-log {
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.logbook .data-log td {
+  vertical-align: top;
+}
+
+.logbook .data-log td:nth-child(1){
+  width: 12%;
+  text-align: center;
+}
+
+.logbook .data-log td:nth-child(2){
+  width: 15%;
+  text-align: center;
+}
+
+.logbook .data-log th:nth-child(3) {
+  text-align: left;
+}
+
+.logbook .data-log p {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.logbook span {
+  padding-left: 15px;
+  font-size: 0.6em;
+  animation: blink-animation 1s steps(2, start) infinite;
+}
+
+@keyframes blink-animation {
+  to {visibility: hidden;}
+}
+
+.log-info {
+  margin: auto;
+}
+
+.log-info a {
+  color: #00BB00;
+}
+
+.log-info a:hover {
+  color: #00DC00;
+}
+
+.log-info td{
+  padding: 5px;
+  vertical-align: top;
+}
+
+.log-info td:nth-child(1) {
+  text-align: right;
+  width: 50%;
+}
+
+/* Responsive CSS for Achievements Page ==================================== */
+
+@media (max-width: 600px) {
+  .achieve-container {
+    width: 35%;
+  }
+
+  .logbook {
+    width:100%;
+  }
+
+  .gallery img {
+  width: 30%;
+  }
+}

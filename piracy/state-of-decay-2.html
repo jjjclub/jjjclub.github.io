@@ -2,125 +2,129 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>State of Decay 2</title>
+    <title>JJJ Website</title>
     <link rel="icon" type="image/x-icon" href="../images/jjj-logo.png">
-    <link rel="stylesheet" href="../styles-v2.css">
+    <link rel="stylesheet" href="../main-styles.css">
+    <link rel="stylesheet" href="piracy-styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen&family=Abel">
     <script src="https://kit.fontawesome.com/9cc3415277.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <nav>
-      <div class="menu">
-        <a href="../index.html"><img class="logo" src="../images/jjj-logo.png" alt="JJJ Logo"></a>
-        <h1>State of Decay 2</h1>
-        <div class="flex-grow"></div> <!--Used to give space between the logo/title and social buttons -->
-        <div class="socials">
-            <a href="../mainpages/piracy-catalog.html">Piracy Catalog</a>
+    <main>
+      <header>
+        <nav>
+          <a href="../index.html"><img class="logo" src="../images/jjj-logo.png" alt="JJJ Logo"></a>
+          <h1>State of Decay 2</h1>
+          <div class="socials">
+            <div>
+              <a href="../mainpages/piracy-catalog.html"><h1>Piracy Catalog</h1></a>
+            </div>
             <ul class="tooltip">
               <li>
                 <a href="https://discord.gg/npRN2KqTp8" target="_blank">
                 <i class="fa-brands fa-discord"></i>
-                <span class="tooltiptext">Discord</span></a>
+                <p class="tooltip-text">Discord</p></a>
               </li>
               <li>
                 <a href="https://www.youtube.com/channel/UCiwD3fusntkhfdU45G-_8GA" target="_blank">
                 <i class="fa-brands fa-youtube"></i>
-                <span class="tooltiptext">Youtube</span></a>
+                <p class="tooltip-text">Youtube</p></a>
               </li>
               <li>
                 <a href="https://drive.google.com/drive/folders/1niYy2ZfIGwD9vCLXrpqZ0DC9jlTIdve1?usp=sharing" target="_blank">
-                <i class="fa-brands fa-google-drive">
-                </i><span class="tooltiptext">Google Drive</span></a>
+                <i class="fa-brands fa-google-drive"></i>
+                <p class="tooltip-text">Google Drive</p></a>
               </li>
             </ul>
-        </div>
-      </div>
-    </nav>
-    <main>
-      <img class="banner" src="https://i.imgur.com/dZ7DfpM.png" alt="State of Decay 2 Banner">
-      <h2>Information</h2>
-      <p><b>Download Links:</b></p>
-      <ul>
-        <li>Main Game - <a href="https://cdn.discordapp.com/attachments/842380425339076629/1000005836007022642/State_of_Decay_2_Juggernaut_Edition_Online-Fix-ME.torrent"> Torrent</a></li>
-      </ul>
-      <table class="styled-table">
-        <thead>
-          <tr>
-            <th>Category</th>
-            <th>Details</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Last Update</td>
-            <td>2022-08-05</td>
-          </tr>
-          <tr>
-            <td>Version</td>
-            <td>Build 06072022</td>
-          </tr>
-          <tr>
-            <td>Torrent Size</td>
-            <td>17.6 GB</td>
-          </tr>
-          <tr>
-            <td>Installation Size</td>
-            <td>20.2 GB</td>
-          </tr>
-          <tr>
-            <td>Pirate</td>
-            <td>Online-Fix.Me</td>
-          </tr>
-        </tbody>
-      </table>
-      <h2>Instructions</h2>
-      <ol>
-        <li>Extract both .rar files simultaneously.</li>
-        <li>In the <code>Fix Repair</code> folder, extract the <code>SoD2JE_Fix_Repair_Steam_V4_Generic</code> .rar file, copy the contents and paste it in the game files.
-          Extraction password is <code>online-fix.me</code>. Confirm overwrite of files.</li>
-        <li>Run <code>stateofdecay2.exe</code> to play.</li>
-        <li><p>To play multiplayer, go to in game <code>Setting > Multiplayer</code> and check all the following:</p>
-          <ul>
-            <li>Host Multiplayer Game</li>
-            <li>Open to friends.</li>
-          </ul>
-        </li>
-        <li>Create a campaign and finish the tutorial. In the menu, select <code>Mutliplayer</code> to see available friends and invite them.</li>
-      </ol>
-      <p>By default, the game will be set to Russian. Here is how to change it:</p>
-      <ol>
-        <li>In this directory: <code>State of Decay 2 Juggernaut Edition\StateOfDecay2\Binaries\Win64</code>, open <code>OnlineFix.ini</code>.</li>
-        <li>Change <code>Language=russian</code> to <code>Language=english</code>.</li>
-        <li>Save and Exit.</li>
-      </ol>
-      <h2>Notes</h2>
-      <ol>
-        <li>If the game refuses to launch, shorten the directory where you placed the game files.</li>
-        <li>Steam must be open to play singleplayer and Xbox app must be open for multiplayer.</li>
-        <li>A Microsoft/Xbox account is needed to play multiplayer. The initial screen will ask you to log in after you launch the game.</li>
-        <li>You must complete the tutorial before inviting friends. The tutorial ends when the player has cured the other survivor you were with during the tutorial.</li>
-      </ol>
+          </div>
+        </nav>
+      </header>
+      <section class="primary-section">
+        <img class="banner" src="https://i.imgur.com/dZ7DfpM.png" alt="State of Decay 2 Banner">
+        <h2>Information</h2>
+        <table class="piracy-table">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Download Link/s</td>
+              <td>Main Game - <a href="https://cdn.discordapp.com/attachments/842380425339076629/1000005836007022642/State_of_Decay_2_Juggernaut_Edition_Online-Fix-ME.torrent">Torrent</a></td>
+            </tr>
+            <tr>
+              <td>Last Update</td>
+              <td>2022-08-05</td>
+            </tr>
+            <tr>
+              <td>Version</td>
+              <td>Build 06072022</td>
+            </tr>
+            <tr>
+              <td>Torrent Size</td>
+              <td>17.6 GB</td>
+            </tr>
+            <tr>
+              <td>Installation Size</td>
+              <td>20.2 GB</td>
+            </tr>
+            <tr>
+              <td>Pirate/s</td>
+              <td>Online-Fix.Me</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>Instructions</h2>
+        <ol>
+          <li>Extract both .rar files simultaneously.</li>
+          <li>In the <code>Fix Repair</code> folder, extract the <code>SoD2JE_Fix_Repair_Steam_V4_Generic</code> .rar file, copy the contents and paste it in the game files.
+            Extraction password is <code>online-fix.me</code>. Confirm overwrite of files.</li>
+          <li>Run <code>stateofdecay2.exe</code> to play.</li>
+          <li><p>To play multiplayer, go to in-game <code>Setting > Multiplayer</code> and check all the following:</p>
+            <ul>
+              <li>Host Multiplayer Game</li>
+              <li>Open to friends.</li>
+            </ul>
+          </li>
+          <li>Create a campaign and finish the tutorial. In the menu, select <code>Mutliplayer</code> to see available friends and invite them.</li>
+        </ol>
+        <p>By default, the game will be set to Russian. Here is how to change it:</p>
+        <ol>
+          <li>In this directory: <code>State of Decay 2 Juggernaut Edition\StateOfDecay2\Binaries\Win64</code>, open <code>OnlineFix.ini</code>.</li>
+          <li>Change <code>Language=russian</code> to <code>Language=english</code>.</li>
+          <li>Save and Exit.</li>
+        </ol>
+        <h2>Notes</h2>
+        <ol>
+          <li>If the game refuses to launch, shorten the directory where you placed the game files.</li>
+          <li>Steam must be open to play singleplayer and Xbox app must be open for multiplayer.</li>
+          <li>A Microsoft/Xbox account is needed to play multiplayer. The initial screen will ask you to log in after you launch the game.</li>
+          <li>You must complete the tutorial before inviting friends. The tutorial ends when the player has cured the other survivor you were with during the tutorial.</li>
+        </ol>
+      </section>
     </main>
+    <footer>
+      <ul class="tooltip">
+        <li>
+          <a href="../contact-us.html">
+          <i class="fa-solid fa-envelope"></i>
+          <span class="tooltip-text">Contact Us</span></a>
+        </li>
+        <li>
+          <a href="../about-us.html">
+          <i class="fa-solid fa-users"></i>
+          <span class="tooltip-text">About Us</span></a>
+        </li>
+        <li>
+          <a href="https://forms.gle/c3qW1wx6KMNfFKTL9" target="_blank">
+          <i class="fa-solid fa-bug"></i>
+          <span class="tooltip-text">Report a Problem</span></a>
+        </li>
+      </ul>
+      <p class="text-center">© 2022 JJJ</p>
+    </footer>
   </body>
-  <footer class="footer">
-    <ul  class="tooltip">
-      <li>
-        <a href="../contact-us.html">
-        <i class="fa-solid fa-envelope"></i>
-        <span class="tooltiptext">Contact Us</span></a>
-      </li>
-      <li>
-        <a href="../about-us.html">
-        <i class="fa-solid fa-users"></i>
-        <span class="tooltiptext">About Us</span></a>
-      </li>
-      <li>
-        <a href="https://forms.gle/c3qW1wx6KMNfFKTL9" target="_blank">
-        <i class="fa-solid fa-bug"></i>
-        <span class="tooltiptext">Report a Problem</span></a>
-      </li>
-    </ul>
-    <p class="text-center">© 2022 JJJ</p>
-  </footer>
 </html>

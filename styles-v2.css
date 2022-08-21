@@ -80,6 +80,8 @@ body {
   background-color: #161616;
   color: #dcddde;
   font-family: "Segoe UI";
+  position: relative;
+  min-height: 100vh;
 }
 
 /* All about the Navigation portion above all the pages */
@@ -260,6 +262,11 @@ code { /* Callout for certain words */
 }
 
 .footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
   font-size: 18px;
 }
 
@@ -270,7 +277,6 @@ code { /* Callout for certain words */
 .footer ul {
   list-style: none;
   padding-left: 0px;
-  margin-top: 75px;
   margin-bottom: -4px;
   display: flex;
   justify-content: center;

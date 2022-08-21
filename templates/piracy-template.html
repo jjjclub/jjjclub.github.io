@@ -1,10 +1,21 @@
 <!DOCTYPE html>
+<!--
+WHAT NEEDS TO BE CHANGED?
+h1 title
+Banner source and alt text
+Torrent link/text
+Following details: last update, version, torren size, installation size, and pirate
+Instructions (if needed)
+Notes (if needed)
+-->
+
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
     <title>JJJ Website</title>
-    <link rel="icon" type="image/x-icon" href="images/jjj-logo.png">
-    <link rel="stylesheet" href="main-styles.css">
+    <link rel="icon" type="image/x-icon" href="../images/jjj-logo.png">
+    <link rel="stylesheet" href="../main-styles.css">
+    <link rel="stylesheet" href="piracy-styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen&family=Abel">
     <script src="https://kit.fontawesome.com/9cc3415277.js" crossorigin="anonymous"></script>
@@ -12,11 +23,13 @@
   <body>
     <main>
       <header>
-        <img class="head-banner" src="https://wallpaperaccess.com/full/3581596.jpg" alt="Home Banner">
         <nav>
-          <img style="width:80px;" src="images/jjj-logo.png" alt="JJJ Logo">
-          <h1>Hompage</h1>
+          <a href="../index.html"><img class="logo" src="../images/jjj-logo.png" alt="JJJ Logo"></a>
+          <h1>LOREMIPSUM</h1>
           <div class="socials">
+            <div>
+              <a href="../mainpages/piracy-catalog.html"><h1>Piracy Catalog</h1></a>
+            </div>
             <ul class="tooltip">
               <li>
                 <a href="https://discord.gg/npRN2KqTp8" target="_blank">
@@ -38,23 +51,61 @@
         </nav>
       </header>
       <section class="primary-section">
-        <div class="temporary">
-          <p>Currently Under Construction</p>
-          <a href="mainpages/piracy-catalog.html">Piracy Catalog</a>
-          <br>
-          <a href="mainpages/achievements.html">Achievements</a>
-        </div>
+        <img class="banner" src="#" alt="Banner">
+        <h2>Information</h2>
+        <table class="piracy-table">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Download Link/s</td>
+              <td>Main Game - <a href="#">Torrent</a></td>
+            </tr>
+            <tr>
+              <td>Last Update</td>
+              <td>LOREMIPSUM</td>
+            </tr>
+            <tr>
+              <td>Version</td>
+              <td>LOREMIPSUM</td>
+            </tr>
+            <tr>
+              <td>Torrent Size</td>
+              <td>LOREMIPSUM</td>
+            </tr>
+            <tr>
+              <td>Installation Size</td>
+              <td>LOREMIPSUM</td>
+            </tr>
+            <tr>
+              <td>Pirate/s</td>
+              <td>LOREMIPSUM</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2>Instructions</h2>
+        <ol>
+          <li>LOREMIPSUM</li>
+        </ol>
+        <h2>Notes</h2>
+        <ol>
+          <li>LOREMIPSUM</li>
+        </ol>
       </section>
     </main>
     <footer>
       <ul class="tooltip">
         <li>
-          <a href="contact-us.html">
+          <a href="../contact-us.html">
           <i class="fa-solid fa-envelope"></i>
           <span class="tooltip-text">Contact Us</span></a>
         </li>
         <li>
-          <a href="about-us.html">
+          <a href="../about-us.html">
           <i class="fa-solid fa-users"></i>
           <span class="tooltip-text">About Us</span></a>
         </li>

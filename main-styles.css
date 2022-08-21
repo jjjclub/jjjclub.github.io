@@ -1,0 +1,192 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #161616;
+  color: #dcddde;
+  font-family: "Segoe UI";
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  padding-bottom: 2.5rem;
+}
+
+a {
+  color: #7965D5;
+  text-underline-offset: 4px;
+}
+
+a:hover {
+  color: #9D92D3;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  margin-left: 10%;
+  margin-right: 10%;
+  position: relative;
+  font-family: "Silkscreen";
+}
+
+nav h1 {
+  font-size: 1.4em;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
+.socials {
+  display: inherit;
+  align-items: inherit;
+  margin-left: auto;
+  text-align: center;
+  padding-left: 15px;
+}
+
+.socials h1 {
+  font-size: 1.1em;
+}
+
+.socials ul {
+  display: inherit;
+  align-items: inherit;
+  list-style: none;
+  padding-left: 10px;
+  padding-right: 20px;
+  font-size: 1.2em;
+}
+
+.socials li {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.primary-section {
+  margin-top: 30px;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-family: "Abel";
+  font-size: 1.3em;
+}
+
+footer {
+  margin: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: "Abel";
+}
+
+footer ul {
+  padding-left: 0px;
+  font-family: "Silkscreen";
+}
+
+footer li {
+  list-style: none;
+  margin: 0px 15px 0px 15px;
+}
+
+/* Not My Code */
+.tooltip li {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip li .tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-size: 0.7em;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 100%;
+  margin-left: -60px;
+}
+
+.tooltip li:hover .tooltip-text {
+  visibility: visible;
+}
+/* End of Not My Code */
+
+/* Homepage ================================================================ */
+
+.head-banner {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  opacity: 20%;
+  max-height: 100vh;
+}
+
+.temporary {
+  position: relative;
+  text-align: center;
+  font-family: "Silkscreen";
+  color: #DDD964;
+}
+
+/* Mobile Responsive css =================================================== */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    margin-top: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+  }
+
+  nav h1 {
+    font-size: 1em;
+  }
+
+  nav .logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .socials {
+    margin: auto;
+    margin-bottom: -1.5em;
+    padding-left: 0px;
+    font-size: 0.9em;
+    flex-direction: column;
+  }
+
+  .socials ul {
+    margin-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .primary-section {
+    margin-left:5%;
+    margin-right:5%;
+    font-size: 1em;
+  }
+}
