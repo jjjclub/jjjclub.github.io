@@ -26,7 +26,7 @@
 }
 
 .box-art img {
-  width: 100%; /* images should be 1500x500 */
+  width: 100%; /* images should be 500x500 */
   background-color: #1D1D1D;
   border-radius: 6px;
   box-shadow: 3px 4px 5px 0.5px rgba(0, 0, 0, 12);
