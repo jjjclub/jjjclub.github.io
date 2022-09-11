@@ -47,7 +47,9 @@
 }
 
 .game-status p {opacity: 0%;}
-.game-img:hover {opacity: 10%;}
+.game-img:hover {
+  opacity: 10%;
+}
 .game-img:hover + .game-status p {opacity: 100%;}
 
 .aborted .game-status p {color: red;}
