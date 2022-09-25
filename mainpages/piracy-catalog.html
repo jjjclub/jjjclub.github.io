@@ -9,8 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen&family=Abel">
     <script src="https://kit.fontawesome.com/9cc3415277.js" crossorigin="anonymous"></script>
+    <script src="../scripts/piracyScript.js" charset="utf-8"></script>
   </head>
-  <body>
+  <body onload="sortList()">
     <main>
       <header>
         <nav>
@@ -39,7 +40,7 @@
       </header>
       <section class="primary-section">
         <div class="piracy-main">
-          <ul class="catalog-list">
+          <ul class="catalog-list" id="catalog-list">
             <li class="catalog-container">
               <div class="box-art">
                 <a href="../piracy/aliens-fireteam-elite.html"><img src="https://i.imgur.com/B4Lv0io.png" alt="Aliens: Fireteam Elite box art"></a>

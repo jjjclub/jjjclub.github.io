@@ -1,0 +1,153 @@
+/* Active Games Banner */
+#activeGamesBanner {
+  display: flex;
+  justify-content: center;
+  column-gap: 70px;
+  position: relative;
+}
+
+#activeGamesBanner a {
+  z-index: 1;
+}
+
+#activeBackBanner {
+  /* background-color: #233FA0; */
+  position: absolute;
+  min-height: 90%;
+  max-height: 90%;
+  min-width: 800px;
+  max-width: 800px;
+  border-radius: 20px;
+  opacity: 60%;
+  box-shadow: 0 0 10px black;
+}
+
+.activeGame {
+  border-radius: 0 0 20px 20px;
+  margin-bottom: 7em;
+  z-index: 1;
+  height: 400px;
+  width: 150px;
+  box-shadow: 0 0 10px black;
+}
+
+#activeText {
+  font-family: "Silkscreen";
+  font-size: 1.5em;
+  letter-spacing: 0.5em;
+  position: absolute;
+  bottom: 13%;
+  text-shadow: 0 0 15px black, 0 0 15px black;
+}
+
+/* Achievements Catalog ---------------------------------------------------- */
+#achieveContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+#achieveContainer button {
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+}
+
+.achieveBoxes,
+#achieveHeader {
+  display: inherit;
+  align-items: center;
+  width: 100%;
+  background-color: #1D1D1D;
+  border-radius: 10px;
+}
+
+#achieveHeader {background-color: #7965D5;}
+.achieveHead {color: black;}
+
+.achieveData,
+.achieveHead {
+  display: inherit;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  min-height: 3em;
+  margin: 7px;
+  text-align: center;
+}
+
+.achieveData {
+  color: #dcddde;
+}
+
+.achieveDropPanel {
+  display: hidden;
+  padding: 0 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.active, .achieveBoxes:hover {
+  background-color: #282828;
+}
+
+.dropPanelData {
+  display: flex;
+  width: 100%;
+  margin: 5px;
+}
+
+.dropPanelPlayers,
+.dropPanelLog,
+.dropPanelAwards {
+  padding: 10px;
+}
+
+.dropPanelLog {
+  width: 50%;
+  padding-right: 30px;
+  border-left: 6px solid #1D1D1D;
+  border-right: 6px solid #1D1D1D;
+}
+
+.dropPanelPlayers,
+.dropPanelAwards {width: 25%;}
+
+.dropPanelPlayers {text-align: center;}
+
+.dropPanelAwards {text-align: center;}
+
+.dropPanelAwards i {color: gold;}
+
+.dropPanelCategory {
+  margin: 5px;
+  text-align: center;
+  background-color: #1D1D1D;
+  border-radius: 30px;
+}
+
+.playerTable {width: 100%}
+
+.playerTable td:first-child {
+  width: 75%;
+  padding-left: 3%;
+}
+
+.logTable {width: 100%;}
+.logTable hr {border: 3px solid #1D1D1D;}
+.logTable td {padding: 5px;}
+
+.logTable td:first-child {
+  width: 30%;
+  text-align: center;
+  vertical-align: top;
+}
+
+
+.completed {color: #58A15D;}
+.paused {color:#FCE185} /* Swwet Corn*/
+.aborted {color: #A0272E}
+
+.award {font-size: 0.8em}
