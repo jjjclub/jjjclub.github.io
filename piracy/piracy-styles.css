@@ -52,6 +52,12 @@
   box-shadow: 6px 7px 8px 0.5px rgba(0, 0, 0, 12);
 }
 
+.piracy-table ul {
+  list-style: none;
+  padding-left: 0px;
+  margin: 0px;
+}
+
 .piracy-table tr th{
   background-color: #6757B2;
   color: #000000;
