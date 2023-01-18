@@ -12,7 +12,7 @@
   <body>
     <main>
       <header>
-        <img class="head-banner" src="https://wallpaperaccess.com/full/3581596.jpg" alt="Home Banner">
+        <!-- <img class="head-banner" src="https://wallpaperaccess.com/full/3581596.jpg" alt="Home Banner"> -->
         <nav>
           <img style="width:80px;" src="images/jjj-logo.png" alt="JJJ Logo">
           <h1>Hompage</h1>
@@ -40,8 +40,6 @@
       <section class="primary-section">
         <div class="temporary">
           <p>Currently Under Construction</p>
-          <a href="mainpages/piracy-catalog.html">Piracy Catalog</a>
-          <br>
           <a href="mainpages/achievements.html">Achievements</a>
         </div>
       </section>
@@ -64,7 +62,8 @@
           <span class="tooltip-text">Report a Problem</span></a>
         </li>
       </ul>
-      <p class="text-center">© 2022 JJJ</p>
+      <p class="text-center" id="copyright"></p>
+      <script>document.getElementById("copyright").innerHTML = "© " + new Date().getFullYear() + " JJJ"</script>
     </footer>
   </body>
 </html>

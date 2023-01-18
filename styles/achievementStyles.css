@@ -11,7 +11,7 @@
 }
 
 #activeBackBanner {
-  /* background-color: #233FA0; */
+  /* background-color: #233FA0; */ /* For emergency when image can't load */
   position: absolute;
   min-height: 90%;
   max-height: 90%;
@@ -121,6 +121,8 @@
 
 .dropPanelAwards i {color: gold;}
 
+.award {font-size: 0.8em}
+
 .dropPanelCategory {
   margin: 5px;
   text-align: center;
@@ -147,7 +149,6 @@
 
 
 .completed {color: #58A15D;}
-.paused {color:#FCE185} /* Swwet Corn*/
+.standby {color:#F4F186} /* Sweet Corn */
 .aborted {color: #A0272E}
-
-.award {font-size: 0.8em}
+.ongoing {color: #2E5A88} /* Light Navy Blue */

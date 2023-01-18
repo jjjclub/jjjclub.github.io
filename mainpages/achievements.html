@@ -5,13 +5,13 @@
     <title>JJJ Website</title>
     <link rel="icon" type="image/x-icon" href="../images/jjj-logo.png">
     <link rel="stylesheet" href="../main-styles.css">
-    <link rel="stylesheet" href="../achievements/achieve-styles.css">
     <link rel="stylesheet" href="../styles/achievementStyles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen&family=Abel">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/9cc3415277.js" crossorigin="anonymous"></script>
+    <script src="../scripts/achieveScripts.js"></script> 
   </head>
-  <body>
+  <body onload="onloadFunctions()">
     <main>
       <header>
         <nav>
@@ -40,10 +40,10 @@
       </header>
       <section class="primary-section">
         <div id="activeGamesBanner">
-          <!-- Active Games must be 150w by 400h -->
-          <!-- gameBannerEmpty -->
-          <img class="activeGame" src="https://i.imgur.com/xDzf8NW.png" alt="Active Game 1">
-          <img class="activeGame" src="https://i.imgur.com/3DjdtNg.png" alt="Active Game 2"></a>
+          <!-- Active Games Image must be 150w by 400h -->
+          <!-- "../images/gameBannerEmpty.png" -->
+          <img class="activeGame" src="../images/gameBannerEmpty.png" alt="Active Game 1">
+          <img class="activeGame" src="../images/gameBannerEmpty.png" alt="Active Game 2"></a>
           <img class="activeGame" src="../images/gameBannerEmpty.png" alt="Active Game 3"></a>
           <!-- Background must be 1980w by 1080h -->
           <img id="activeBackBanner" src="../images/gameBannerBG.png" alt="Active Games Background">
@@ -54,31 +54,22 @@
             <div class="achieveHead">Game Name</div>
             <div class="achieveHead">Start</div>
             <div class="achieveHead">End</div>
-            <div class="achieveHead">Total Duration</div>
-            <div class="achieveHead">Status</div>
-            <!--
-            <i class="fa-solid fa-circle-check"></i>
-            <i class="fa-solid fa-circle-pause"></i>
-            <i class="fa-solid fa-circle-xmark"></i>
-
-            <i class="fa-solid fa-check"></i>
-            <i class="fa-solid fa-xmark"></i>
-            -->
+            <div class="achieveHead">Total Duration</div> <!-- Automatic JS-->
+            <div class="achieveHead">Status</div> <!-- Automatic JS-->
           </div>
 
           <button class="achieveBoxes">
             <div class="achieveData">Sven Co-op</div>
-            <div class="achieveData">Aug. 10, 2020</div>
-            <div class="achieveData">Aug. 13, 2020</div>
-            <div class="achieveData">3 days</div>
-            <div class="achieveData completed"><i class="fa-solid fa-circle-check"></i></div>
+            <div class="achieveData">2020-08-10</div>
+            <div class="achieveData">2020-08-13</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData status completed"></div>
           </button>
           <div class="achieveDropPanel">
             <div class="dropPanelData">
               <div class="dropPanelPlayers">
-                <p class="dropPanelCategory">Infromation</p>
+                <p class="dropPanelCategory">Information</p>
                 <p>Acetanzia <br> Blend <br> Sempy</p>
-                <p><a href="#">Image Gallery</a></p>
               </div>
               <div class="dropPanelLog">
                 <p class="dropPanelCategory">Log</p>
@@ -96,23 +87,29 @@
               </div>
               <div class="dropPanelAwards">
                 <p class="dropPanelCategory">Awards</p>
+                <!-- Awards must be completed before award is given -->
+                <!-- Game of the Year <i class="fa-solid fa-trophy"></i>     Best Game of the Year            -->
+                <!-- JJJ Recommended  <i class="fa-solid fa-award"></i>      Quality Game                     -->
+                <!-- On Repeat Award  <i class="fa-solid fa-rotate-right">   Replayed at least 3 times        -->
+                <!-- Hidden Gem Award <i class="fa-regular fa-gem"></i>      Games that are unexpectedly good -->
+                <!-- Love Hate Award  <i class="fa-solid fa-heart-pulse"></i> Games that fought tooth and nail to be completed -->
+                <!-- Garbage Award    <i class="fa-solid fa-poop"></i>       Extremenly Garbage Games         -->
               </div>
             </div>
           </div>
 
           <button class="achieveBoxes">
             <div class="achieveData">Remnant: <br> From the Ashes</div>
-            <div class="achieveData">Aug. 22, 2020</div>
-            <div class="achieveData">Sep. 03, 2020</div>
-            <div class="achieveData">12 days</div>
-            <div class="achieveData completed"><i class="fa-solid fa-circle-check"></i></div>
+            <div class="achieveData">2020-08-22</div>
+            <div class="achieveData">2020-09-03</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData completed"></div>
           </button>
           <div class="achieveDropPanel">
             <div class="dropPanelData">
               <div class="dropPanelPlayers">
-                <p class="dropPanelCategory">Infromation</p>
+                <p class="dropPanelCategory">Information</p>
                 <p>Acetanzia <br> Blend <br> Sempy</p>
-                <p><a href="#">Image Gallery</a></p>
               </div>
               <div class="dropPanelLog">
                 <p class="dropPanelCategory">Log</p>
@@ -134,23 +131,24 @@
               </div>
               <div class="dropPanelAwards">
                 <p class="dropPanelCategory">Awards</p>
+                <p class="award"><i class="fa-solid fa-trophy"></i> <br> Game of the Year (2020)</p>
+                <p class="award"><i class="fa-regular fa-gem"></i> <br> Hidden Gem (2020)</p>
               </div>
             </div>
           </div>
 
           <button class="achieveBoxes">
             <div class="achieveData">Tom Clancy's <br> The Division</div>
-            <div class="achieveData">Sep. 06, 2020</div>
-            <div class="achieveData">Sep. 07, 2020</div>
-            <div class="achieveData">1 day</div>
-            <div class="achieveData paused"><i class="fa-solid fa-circle-pause"></i></div>
+            <div class="achieveData">2020-09-06</div>
+            <div class="achieveData">2020-09-07</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData standby"></div>
           </button>
           <div class="achieveDropPanel">
             <div class="dropPanelData">
               <div class="dropPanelPlayers">
-                <p class="dropPanelCategory">Infromation</p>
+                <p class="dropPanelCategory">Information</p>
                 <p>Acetanzia <br> Blend <br> Sempy</p>
-                <p><a href="#">Image Gallery</a></p>
               </div>
               <div class="dropPanelLog">
                 <p class="dropPanelCategory">Log</p>
@@ -178,17 +176,16 @@
 
           <button class="achieveBoxes">
             <div class="achieveData">The Forest</div>
-            <div class="achieveData">Dec. 28, 2020</div>
-            <div class="achieveData">Jan. 02, 2021</div>
-            <div class="achieveData">5 days</div>
-            <div class="achieveData completed"><i class="fa-solid fa-circle-check"></i></div>
+            <div class="achieveData">2020-12-28</div>
+            <div class="achieveData">2021-01-02</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData completed"></div>
           </button>
           <div class="achieveDropPanel">
             <div class="dropPanelData">
               <div class="dropPanelPlayers">
-                <p class="dropPanelCategory">Infromation</p>
+                <p class="dropPanelCategory">Information</p>
                 <p>Acetanzia <br> Blend <br> Sempy</p>
-                <p><a href="#">Image Gallery</a></p>
               </div>
               <div class="dropPanelLog">
                 <p class="dropPanelCategory">Log</p>
@@ -207,23 +204,23 @@
               </div>
               <div class="dropPanelAwards">
                 <p class="dropPanelCategory">Awards</p>
+                <p class="award"><i class="fa-solid fa-award"></i> <br> Quality Award (2020)</p>
               </div>
             </div>
           </div>
 
           <button class="achieveBoxes">
             <div class="achieveData">Path of Exile</div>
-            <div class="achieveData">Jan. 10, 2021</div>
-            <div class="achieveData">Jan. 20, 2021</div>
-            <div class="achieveData">10 days</div>
-            <div class="achieveData aborted"><i class="fa-solid fa-circle-xmark"></i></div>
+            <div class="achieveData">2021-01-10</div>
+            <div class="achieveData">2021-01-20</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData aborted"></div>
           </button>
           <div class="achieveDropPanel">
             <div class="dropPanelData">
               <div class="dropPanelPlayers">
-                <p class="dropPanelCategory">Infromation</p>
+                <p class="dropPanelCategory">Information</p>
                 <p>Acetanzia <br> Blend <br> Sempy</p>
-                <p><a href="#">Image Gallery</a></p>
               </div>
               <div class="dropPanelLog">
                 <p class="dropPanelCategory">Log</p>
@@ -247,17 +244,16 @@
 
           <button class="achieveBoxes">
             <div class="achieveData">Raft</div>
-            <div class="achieveData">Jul. 17, 2022</div>
-            <div class="achieveData">Aug. 02, 2022</div>
-            <div class="achieveData">16 days</div>
-            <div class="achieveData completed"><i class="fa-solid fa-circle-check"></i></div>
+            <div class="achieveData">2022-07-17</div>
+            <div class="achieveData">2022-08-02</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData completed"></div>
           </button>
           <div class="achieveDropPanel">
             <div class="dropPanelData">
               <div class="dropPanelPlayers">
-                <p class="dropPanelCategory">Infromation</p>
+                <p class="dropPanelCategory">Information</p>
                 <p>Acetanzia <br> Blend <br> Dyorz <br> Sempy <br> Soojin</p>
-                <p><a href="#">Image Gallery</a></p>
               </div>
               <div class="dropPanelLog">
                 <p class="dropPanelCategory">Log</p>
@@ -284,23 +280,23 @@
               </div>
               <div class="dropPanelAwards">
                 <p class="dropPanelCategory">Awards</p>
+                <p class="award"><i class="fa-solid fa-award"></i> <br> Quality Award (2022)</p>
               </div>
             </div>
           </div>
 
           <button class="achieveBoxes">
             <div class="achieveData">Terraria <br> (Classic Run)</div>
-            <div class="achieveData">Feb. 09, 2021</div>
-            <div class="achieveData">Feb. 19, 2021</div>
-            <div class="achieveData">10 days</div>
-            <div class="achieveData completed"><i class="fa-solid fa-circle-check"></i></div>
+            <div class="achieveData">2021-02-09</div>
+            <div class="achieveData">2021-02-19</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData completed"></div>
           </button>
           <div class="achieveDropPanel">
             <div class="dropPanelData">
               <div class="dropPanelPlayers">
-                <p class="dropPanelCategory">Infromation</p>
+                <p class="dropPanelCategory">Information</p>
                 <p>Acetanzia <br> Blend <br> Dyorz <br> Sempy</p>
-                <p><a href="#">Image Gallery</a></p>
               </div>
               <div class="dropPanelLog">
                 <p class="dropPanelCategory">Log</p>
@@ -318,23 +314,23 @@
               </div>
               <div class="dropPanelAwards">
                 <p class="dropPanelCategory">Awards</p>
+                <p class="award"><i class="fa-solid fa-award"></i> <br> Quality Award (2021)</p>
               </div>
             </div>
           </div>
 
           <button class="achieveBoxes">
             <div class="achieveData">Dying Light</div>
-            <div class="achieveData">Feb. 04, 2021</div>
-            <div class="achieveData">Jun. 22, 2021</div>
-            <div class="achieveData">118 days</div>
-            <div class="achieveData completed"><i class="fa-solid fa-circle-check"></i></div>
+            <div class="achieveData">2021-02-04</div>
+            <div class="achieveData">2021-06-22</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData completed"></div>
           </button>
           <div class="achieveDropPanel">
             <div class="dropPanelData">
               <div class="dropPanelPlayers">
-                <p class="dropPanelCategory">Infromation</p>
+                <p class="dropPanelCategory">Information</p>
                 <p>Acetanzia <br> Blend <br> Dyorz <br> Sempy</p>
-                <p><a href="#">Image Gallery</a></p>
               </div>
               <div class="dropPanelLog">
                 <p class="dropPanelCategory">Log</p>
@@ -360,23 +356,23 @@
               </div>
               <div class="dropPanelAwards">
                 <p class="dropPanelCategory">Awards</p>
+                <p class="award"><i class="fa-solid fa-trophy"></i> <br> Game of the Year (2021)</p>
               </div>
             </div>
           </div>
 
           <button class="achieveBoxes">
             <div class="achieveData">Overcooked 2</div>
-            <div class="achieveData">Aug. 13, 2022</div>
-            <div class="achieveData"></div>
-            <div class="achieveData"></div>
-            <div class="achieveData"></div>
+            <div class="achieveData">2022-08-13</div>
+            <div class="achieveData">2022-08-31</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData standby"></div>
           </button>
           <div class="achieveDropPanel">
             <div class="dropPanelData">
               <div class="dropPanelPlayers">
-                <p class="dropPanelCategory">Infromation</p>
+                <p class="dropPanelCategory">Information</p>
                 <p>Acetanzia <br> Blend <br> BluChaToe <br> Dyroz <br> Sempy</p>
-                <p><a href="#">Image Gallery</a></p>
               </div>
               <div class="dropPanelLog">
                 <p class="dropPanelCategory">Log</p>
@@ -396,6 +392,10 @@
                     <td>Aug. 13</td>
                     <td>Game status reopened on the request of Dyorz. BluChaToe did not continue.</td>
                   </tr>
+                  <tr>
+                    <td>Aug. 31</td>
+                    <td>Game status on standby due to Sempy and Blend not wanting to continue.</td>
+                  </tr>
                 </table>
               </div>
               <div class="dropPanelAwards">
@@ -406,17 +406,16 @@
 
           <button class="achieveBoxes">
             <div class="achieveData">GTFO</div>
-            <div class="achieveData">Jun. 28, 2021</div>
-            <div class="achieveData">Jul. 04, 2021</div>
-            <div class="achieveData">6 days</div>
-            <div class="achieveData paused"><i class="fa-solid fa-circle-pause"></i></div>
+            <div class="achieveData">2021-06-28</div>
+            <div class="achieveData">2021-07-04</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData standby"></div>
           </button>
           <div class="achieveDropPanel">
             <div class="dropPanelData">
               <div class="dropPanelPlayers">
-                <p class="dropPanelCategory">Infromation</p>
+                <p class="dropPanelCategory">Information</p>
                 <p>Acetanzia <br> Blend <br> Sempy <br> Soojin</p>
-                <p><a href="#">Image Gallery</a></p>
               </div>
               <div class="dropPanelLog">
                 <p class="dropPanelCategory">Log</p>
@@ -441,17 +440,16 @@
 
           <button class="achieveBoxes">
             <div class="achieveData">Barony</div>
-            <div class="achieveData">Jul. 18, 2021</div>
-            <div class="achieveData">Nov. 24, 2021</div>
-            <div class="achieveData">129 days</div>
-            <div class="achieveData aborted"><i class="fa-solid fa-circle-xmark"></i></div>
+            <div class="achieveData">2021-07-18</div>
+            <div class="achieveData">2021-11-24</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData aborted"></div>
           </button>
           <div class="achieveDropPanel">
             <div class="dropPanelData">
               <div class="dropPanelPlayers">
-                <p class="dropPanelCategory">Infromation</p>
+                <p class="dropPanelCategory">Information</p>
                 <p>Acetanzia <br> Blend <br> Dyorz <br> Sempy </p>
-                <p><a href="#">Image Gallery</a></p>
               </div>
               <div class="dropPanelLog">
                 <p class="dropPanelCategory">Log</p>
@@ -479,17 +477,16 @@
 
           <button class="achieveBoxes">
             <div class="achieveData">Green Hell</div>
-            <div class="achieveData">Aug. 20, 2021</div>
-            <div class="achieveData">Sep. 04, 2021</div>
-            <div class="achieveData">15 days</div>
-            <div class="achieveData aborted"><i class="fa-solid fa-circle-xmark"></i></div>
+            <div class="achieveData">2021-08-20</div>
+            <div class="achieveData">2021-09-04</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData aborted"></div>
           </button>
           <div class="achieveDropPanel">
             <div class="dropPanelData">
               <div class="dropPanelPlayers">
-                <p class="dropPanelCategory">Infromation</p>
+                <p class="dropPanelCategory">Information</p>
                 <p>Acetanzia <br> Blend <br> Dyorz <br> Sempy</p>
-                <p><a href="#">Image Gallery</a></p>
               </div>
               <div class="dropPanelLog">
                 <p class="dropPanelCategory">Log</p>
@@ -514,17 +511,16 @@
 
           <button class="achieveBoxes">
             <div class="achieveData">Muck</div>
-            <div class="achieveData">Sep. 05, 2021</div>
-            <div class="achieveData">Oct. 11, 2021</div>
-            <div class="achieveData">36 days</div>
-            <div class="achieveData completed"><i class="fa-solid fa-circle-check"></i></div>
+            <div class="achieveData">2021-09-05</div>
+            <div class="achieveData">2021-10-11</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData completed"></div>
           </button>
           <div class="achieveDropPanel">
             <div class="dropPanelData">
               <div class="dropPanelPlayers">
-                <p class="dropPanelCategory">Infromation</p>
-                <p>Acetanzia <br> Ayb <br> Blend <br> Sempy <br> Soojin</p>
-                <p><a href="#">Image Gallery</a></p>
+                <p class="dropPanelCategory">Information</p>
+                <p>Acetanzia <br> Ayb <br> Blend <br> Sempy <br> Soojin <br> Szon</p>
               </div>
               <div class="dropPanelLog">
                 <p class="dropPanelCategory">Log</p>
@@ -540,29 +536,39 @@
                   </tr>
                   <tr>
                     <td>Dec. 23</td>
-                    <td>Replayed the game with all players. Finished on the same day.</td>
+                    <td>Replayed the game with Acetanzia, Ayb, Blend, Sempy, and Soojin. Finished on the same day.</td>
+                  </tr>
+                  <tr><td>2022</td><td><hr></td></tr>
+                  <tr>
+                    <td>Dec. 31</td>
+                    <td>Replayed the game with Acetanzia, Blend, Sempy, Dyorz, and Szon. Did not finish the game.</td>
+                  </tr>
+                  <tr><td>2023</td><td><hr></td></tr>
+                  <tr>
+                    <td>Jan. 03</td>
+                    <td>Replayed the game with Acetanzia, Blend, Sempy, and Dyorz. Finished on the same day.</td>
                   </tr>
                 </table>
               </div>
               <div class="dropPanelAwards">
                 <p class="dropPanelCategory">Awards</p>
+                <p class="award"><i class="fa-solid fa-rotate-right"></i> <br> On Repeat Award (2022)</p>
               </div>
             </div>
           </div>
 
           <button class="achieveBoxes">
             <div class="achieveData">Escape Room - <br> Der Kranke Kollege</div>
-            <div class="achieveData">Oct. 05, 2021</div>
-            <div class="achieveData">Oct. 05, 2021</div>
-            <div class="achieveData">> 1 day</div>
-            <div class="achieveData completed"><i class="fa-solid fa-circle-check"></i></div>
+            <div class="achieveData">2021-05-10</div>
+            <div class="achieveData">2021-05-10</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData completed"></div>
           </button>
           <div class="achieveDropPanel">
             <div class="dropPanelData">
               <div class="dropPanelPlayers">
-                <p class="dropPanelCategory">Infromation</p>
+                <p class="dropPanelCategory">Information</p>
                 <p>Acetanzia <br> Blend <br> Sempy</p>
-                <p><a href="#">Image Gallery</a></p>
               </div>
               <div class="dropPanelLog">
                 <p class="dropPanelCategory">Log</p>
@@ -582,17 +588,16 @@
 
           <button class="achieveBoxes">
             <div class="achieveData">Synergy</div>
-            <div class="achieveData">Oct. 31, 2021</div>
-            <div class="achieveData">Jan. 01, 2022</div>
-            <div class="achieveData">80 days</div>
-            <div class="achieveData aborted"><i class="fa-solid fa-circle-xmark"></i></div>
+            <div class="achieveData">2021-10-31</div>
+            <div class="achieveData">2022-01-01</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData aborted"></div>
           </button>
           <div class="achieveDropPanel">
             <div class="dropPanelData">
               <div class="dropPanelPlayers">
-                <p class="dropPanelCategory">Infromation</p>
+                <p class="dropPanelCategory">Information</p>
                 <p>Acetanzia <br> Blend <br> Sempy</p>
-                <p><a href="#">Image Gallery</a></p>
               </div>
               <div class="dropPanelLog">
                 <p class="dropPanelCategory">Log</p>
@@ -617,17 +622,16 @@
 
           <button class="achieveBoxes">
             <div class="achieveData">Barotrauma</div>
-            <div class="achieveData">Nov. 03, 2021</div>
-            <div class="achieveData">Mar. 05, 2022</div>
-            <div class="achieveData">122 days</div>
-            <div class="achieveData paused"><i class="fa-solid fa-circle-pause"></i></div>
+            <div class="achieveData">2021-11-03</div>
+            <div class="achieveData">2022-03-05</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData standby"></div>
           </button>
           <div class="achieveDropPanel">
             <div class="dropPanelData">
               <div class="dropPanelPlayers">
-                <p class="dropPanelCategory">Infromation</p>
-                <p>Acetanzia <br> Blend <br> Dyorz <br> Gabby <br> Sempy <br> Gabby</p>
-                <p><a href="#">Image Gallery</a></p>
+                <p class="dropPanelCategory">Information</p>
+                <p>Acetanzia <br> Blend <br> Dyorz <br> Gabby <br> Sempy
               </div>
               <div class="dropPanelLog">
                 <p class="dropPanelCategory">Log</p>
@@ -652,17 +656,16 @@
 
           <button class="achieveBoxes">
             <div class="achieveData">Alien Swarm: <br> Reactive Drop</div>
-            <div class="achieveData">Nov. 10, 2022</div>
-            <div class="achieveData">Nov. 30, 2022</div>
-            <div class="achieveData">20 days</div>
-            <div class="achieveData completed"><i class="fa-solid fa-circle-check"></i></div>
+            <div class="achieveData">2022-11-10</div>
+            <div class="achieveData">2022-11-30</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData completed"></div>
           </button>
           <div class="achieveDropPanel">
             <div class="dropPanelData">
               <div class="dropPanelPlayers">
-                <p class="dropPanelCategory">Infromation</p>
+                <p class="dropPanelCategory">Information</p>
                 <p>Acetanzia <br> Blend <br> BluChatoe <br> Sempy</p>
-                <p><a href="#">Image Gallery</a></p>
               </div>
               <div class="dropPanelLog">
                 <p class="dropPanelCategory">Log</p>
@@ -686,17 +689,16 @@
 
           <button class="achieveBoxes">
             <div class="achieveData">Terraria <br> (Mastermode) </div>
-            <div class="achieveData">Dec. 24, 2021</div>
-            <div class="achieveData">Jan. 09, 2022</div>
-            <div class="achieveData">16 days</div>
-            <div class="achieveData completed"><i class="fa-solid fa-circle-check"></i></div>
+            <div class="achieveData">2021-12-24</div>
+            <div class="achieveData">2022-01-09</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData completed"></div>
           </button>
           <div class="achieveDropPanel">
             <div class="dropPanelData">
               <div class="dropPanelPlayers">
-                <p class="dropPanelCategory">Infromation</p>
+                <p class="dropPanelCategory">Information</p>
                 <p>Acetanzia <br> Blend <br> Dyorz <br> Gabby <br> Sempy <br> Soojin </p>
-                <p><a href="#">Image Gallery</a></p>
               </div>
               <div class="dropPanelLog">
                 <p class="dropPanelCategory">Log</p>
@@ -721,17 +723,16 @@
 
           <button class="achieveBoxes">
             <div class="achieveData">Terraria <br> (Calamity Mod) </div>
-            <div class="achieveData">Jan. 14, 2022</div>
-            <div class="achieveData">Jan. 23, 2022</div>
-            <div class="achieveData">16 days</div>
-            <div class="achieveData completed"><i class="fa-solid fa-circle-check"></i></div>
+            <div class="achieveData">2022-01-14</div>
+            <div class="achieveData">2022-01-23</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData completed"></div>
           </button>
           <div class="achieveDropPanel">
             <div class="dropPanelData">
               <div class="dropPanelPlayers">
-                <p class="dropPanelCategory">Infromation</p>
+                <p class="dropPanelCategory">Information</p>
                 <p>Blend <br> Dyorz <br> Gabby <br> Soojin </p>
-                <p><a href="#">Image Gallery</a></p>
               </div>
               <div class="dropPanelLog">
                 <p class="dropPanelCategory">Log</p>
@@ -755,17 +756,16 @@
 
           <button class="achieveBoxes">
             <div class="achieveData">Project Zomboid</div>
-            <div class="achieveData">Feb. 05, 2022</div>
-            <div class="achieveData">Jun. 28, 2022</div>
-            <div class="achieveData">143 days</div>
-            <div class="achieveData completed"><i class="fa-solid fa-circle-check"></i></div>
+            <div class="achieveData">2022-02-05</div>
+            <div class="achieveData">2022-06-28</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData completed"></div>
           </button>
           <div class="achieveDropPanel">
             <div class="dropPanelData">
               <div class="dropPanelPlayers">
-                <p class="dropPanelCategory">Infromation</p>
+                <p class="dropPanelCategory">Information</p>
                 <p>Acetanzia <br> Blend <br> Dyorz <br> Sempy <br> Soojin </p>
-                <p><a href="#">Image Gallery</a></p>
               </div>
               <div class="dropPanelLog">
                 <p class="dropPanelCategory">Log</p>
@@ -784,23 +784,23 @@
               </div>
               <div class="dropPanelAwards">
                 <p class="dropPanelCategory">Awards</p>
+                <p class="award"><i class="fa-solid fa-trophy"></i> <br> Game of the Year (2022)</p>
               </div>
             </div>
           </div>
 
           <button class="achieveBoxes">
             <div class="achieveData">Ready or Not</div>
-            <div class="achieveData">Mar. 20, 2022</div>
-            <div class="achieveData">Mar. 26, 2022</div>
-            <div class="achieveData">6 days</div>
-            <div class="achieveData aborted"><i class="fa-solid fa-circle-xmark"></i></div>
+            <div class="achieveData">2022-03-20</div>
+            <div class="achieveData">2022-03-26</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData aborted"></div>
           </button>
           <div class="achieveDropPanel">
             <div class="dropPanelData">
               <div class="dropPanelPlayers">
-                <p class="dropPanelCategory">Infromation</p>
+                <p class="dropPanelCategory">Information</p>
                 <p>Acetanzia <br> Blend <br> Dyorz <br> Sempy <br> Soojin </p>
-                <p><a href="#">Image Gallery</a></p>
               </div>
               <div class="dropPanelLog">
                 <p class="dropPanelCategory">Log</p>
@@ -823,18 +823,59 @@
           </div>
 
           <button class="achieveBoxes">
-            <div class="achieveData">Escape from School</div>
-            <div class="achieveData">Jul. 14, 2022</div>
-            <div class="achieveData">Jul. 14, 2022</div>
-            <div class="achieveData">> 1 day</div>
-            <div class="achieveData completed"><i class="fa-solid fa-circle-check"></i></div>
+            <div class="achieveData">Minecraft</div>
+            <div class="achieveData">2022-05-06</div>
+            <div class="achieveData">2022-11-24</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData standby"></div>
           </button>
           <div class="achieveDropPanel">
             <div class="dropPanelData">
               <div class="dropPanelPlayers">
-                <p class="dropPanelCategory">Infromation</p>
+                <p class="dropPanelCategory">Information</p>
+                <p>Acetanzia <br> Blend <br> Dyorz <br> Sempy <br> Soojin </p>
+              </div>
+              <div class="dropPanelLog">
+                <p class="dropPanelCategory">Log</p>
+                <table class="logTable">
+                  <tr><td>2022</td><td><hr></td></tr>
+                  <tr>
+                    <td>May. 6</td>
+                    <td>Started the game (Hardcore v1.18).</td>
+                  </tr>
+                  <tr>
+                    <td>Jun. 24</td>
+                    <td>On standby due to player burn out.</td>
+                  </tr>
+                  <tr>
+                    <td>Nov. 06</td>
+                    <td>Game status reopened on the request of Acetanzia. Dyorz and Soojin did not continue.  
+                      Updated to v1.19 </td>
+                  </tr>
+                  <tr>
+                    <td>Nov. 24</td>
+                    <td>On standby again due to Sempy quitting.</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="dropPanelAwards">
+                <p class="dropPanelCategory">Awards</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="achieveBoxes">
+            <div class="achieveData">Escape from School</div>
+            <div class="achieveData">2022-07-14</div>
+            <div class="achieveData">2022-07-14</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData completed"></div>
+          </button>
+          <div class="achieveDropPanel">
+            <div class="dropPanelData">
+              <div class="dropPanelPlayers">
+                <p class="dropPanelCategory">Information</p>
                 <p>Acetanzia <br> Blend <br> Dyorz <br> Sempy</p>
-                <p><a href="#">Image Gallery</a></p>
               </div>
               <div class="dropPanelLog">
                 <p class="dropPanelCategory">Log</p>
@@ -855,17 +896,16 @@
 
           <button class="achieveBoxes">
             <div class="achieveData">Left 4 Dead 1</div>
-            <div class="achieveData">Jul. 17, 2022</div>
-            <div class="achieveData">Sep. 02, 2022</div>
-            <div class="achieveData">47 days</div>
-            <div class="achieveData completed"><i class="fa-solid fa-circle-check"></i></div>
+            <div class="achieveData">2022-07-17</div>
+            <div class="achieveData">2022-09-02</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData completed"></div>
           </button>
           <div class="achieveDropPanel">
             <div class="dropPanelData">
               <div class="dropPanelPlayers">
-                <p class="dropPanelCategory">Infromation</p>
+                <p class="dropPanelCategory">Information</p>
                 <p>Acetanzia <br> Blend <br> Dyorz <br> Sempy</p>
-                <p><a href="#">Image Gallery</a></p>
               </div>
               <div class="dropPanelLog">
                 <p class="dropPanelCategory">Log</p>
@@ -889,17 +929,16 @@
 
           <button class="achieveBoxes">
             <div class="achieveData">Alien: <br> Fireteam Elite </div>
-            <div class="achieveData">Aug. 03, 2022</div>
-            <div class="achieveData">Aug. 31, 2022</div>
-            <div class="achieveData">28 days</div>
-            <div class="achieveData paused"><i class="fa-solid fa-circle-pause"></i></div>
+            <div class="achieveData">2022-08-03</div>
+            <div class="achieveData">2022-08-31</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData standby"></div>
           </button>
           <div class="achieveDropPanel">
             <div class="dropPanelData">
               <div class="dropPanelPlayers">
-                <p class="dropPanelCategory">Infromation</p>
+                <p class="dropPanelCategory">Information</p>
                 <p>Acetanzia <br> Dyorz <br> Sempy </p>
-                <p><a href="#">Image Gallery</a></p>
               </div>
               <div class="dropPanelLog">
                 <p class="dropPanelCategory">Log</p>
@@ -923,17 +962,16 @@
 
           <button class="achieveBoxes">
             <div class="achieveData">State of Decay 2</div>
-            <div class="achieveData">Aug. 07, 2022</div>
-            <div class="achieveData">Aug. 28, 2022</div>
-            <div class="achieveData">21 days</div>
-            <div class="achieveData completed"><i class="fa-solid fa-circle-check"></i></div>
+            <div class="achieveData">2022-08-07</div>
+            <div class="achieveData">2022-08-28</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData completed"></div>
           </button>
           <div class="achieveDropPanel">
             <div class="dropPanelData">
               <div class="dropPanelPlayers">
-                <p class="dropPanelCategory">Infromation</p>
+                <p class="dropPanelCategory">Information</p>
                 <p>Acetanzia <br> Blend <br> Dyorz <br> Sempy</p>
-                <p><a href="#">Image Gallery</a></p>
               </div>
               <div class="dropPanelLog">
                 <p class="dropPanelCategory">Log</p>
@@ -959,23 +997,23 @@
               </div>
               <div class="dropPanelAwards">
                 <p class="dropPanelCategory">Awards</p>
+                <p class="award"><i class="fa-solid fa-award"></i> <br> Quality Award (2022)</p>
               </div>
             </div>
           </div>
 
           <button class="achieveBoxes">
             <div class="achieveData">Deep Rock Galactic</div>
-            <div class="achieveData">Aug. 31, 2022</div>
-            <div class="achieveData">Sep. 01, 2022</div>
-            <div class="achieveData">1 day</div>
-            <div class="achieveData paused"><i class="fa-solid fa-circle-pause"></i></div>
+            <div class="achieveData">2022-08-31</div>
+            <div class="achieveData">2022-09-01</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData standby"></div>
           </button>
           <div class="achieveDropPanel">
             <div class="dropPanelData">
               <div class="dropPanelPlayers">
-                <p class="dropPanelCategory">Infromation</p>
+                <p class="dropPanelCategory">Information</p>
                 <p>Acetanzia <br> Blend <br> Dyorz <br> Sempy</p>
-                <p><a href="#">Image Gallery</a></p>
               </div>
               <div class="dropPanelLog">
                 <p class="dropPanelCategory">Log</p>
@@ -999,28 +1037,27 @@
 
           <button class="achieveBoxes">
             <div class="achieveData">Risk of Rain 2</div>
-            <div class="achieveData">Sep. 11, 2022</div>
-            <div class="achieveData">Sep. 23, 2022</div>
-            <div class="achieveData">12 days</div>
-            <div class="achieveData paused"><i class="fa-solid fa-circle-pause"></i></div>
+            <div class="achieveData">2022-09-11</div>
+            <div class="achieveData">2022-09-23</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData standby"></div>
           </button>
           <div class="achieveDropPanel">
             <div class="dropPanelData">
               <div class="dropPanelPlayers">
-                <p class="dropPanelCategory">Infromation</p>
+                <p class="dropPanelCategory">Information</p>
                 <p>Acetanzia <br> Blend <br> Dyorz <br> Sempy</p>
-                <p><a href="#">Image Gallery</a></p>
               </div>
               <div class="dropPanelLog">
                 <p class="dropPanelCategory">Log</p>
                 <table class="logTable">
                   <tr><td>2022</td><td><hr></td></tr>
                   <tr>
-                    <td>Sep. 11, 2022</td>
+                    <td>Sep. 11</td>
                     <td>Started the game.</td>
                   </tr>
                   <tr>
-                    <td>Sep. 23, 2022</td>
+                    <td>Sep. 23</td>
                     <td>On standby due to Acetanzia's intermittent connection. Later all encountered issues with
                      lobby connections and black screens.</td>
                   </tr>
@@ -1034,17 +1071,16 @@
 
           <button class="achieveBoxes">
             <div class="achieveData">Pacify</div>
-            <div class="achieveData">Sep. 16, 2022</div>
-            <div class="achieveData">Sep. 19, 2022</div>
-            <div class="achieveData">3 days</div>
-            <div class="achieveData aborted"><i class="fa-solid fa-circle-xmark"></i></div>
+            <div class="achieveData">2022-09-16</div>
+            <div class="achieveData">2022-09-19</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData aborted"></div>
           </button>
           <div class="achieveDropPanel">
             <div class="dropPanelData">
               <div class="dropPanelPlayers">
-                <p class="dropPanelCategory">Infromation</p>
+                <p class="dropPanelCategory">Information</p>
                 <p>Acetanzia <br> Blend <br> Dyorz <br> Sempy</p>
-                <p><a href="#">Image Gallery</a></p>
               </div>
               <div class="dropPanelLog">
                 <p class="dropPanelCategory">Log</p>
@@ -1068,17 +1104,16 @@
 
           <button class="achieveBoxes">
             <div class="achieveData">One Armed Cook</div>
-            <div class="achieveData">Sep. 03, 2022</div>
-            <div class="achieveData">Sep. 03, 2022</div>
-            <div class="achieveData">> 1 day</div>
-            <div class="achieveData aborted"><i class="fa-solid fa-circle-xmark"></i></div>
+            <div class="achieveData">2022-09-03</div>
+            <div class="achieveData">2022-09-03</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData aborted"></div>
           </button>
           <div class="achieveDropPanel">
             <div class="dropPanelData">
               <div class="dropPanelPlayers">
-                <p class="dropPanelCategory">Infromation</p>
+                <p class="dropPanelCategory">Information</p>
                 <p>Acetanzia <br> Blend <br> Sempy</p>
-                <p><a href="#">Image Gallery</a></p>
               </div>
               <div class="dropPanelLog">
                 <p class="dropPanelCategory">Log</p>
@@ -1092,23 +1127,23 @@
               </div>
               <div class="dropPanelAwards">
                 <p class="dropPanelCategory">Awards</p>
+                <p class="award"><i class="fa-solid fa-poop"></i> <br> Garbage Award (2022)</p>
               </div>
             </div>
           </div>
 
           <button class="achieveBoxes">
             <div class="achieveData">Astroneer</div>
-            <div class="achieveData">Sep. 09, 2022</div>
-            <div class="achieveData"></div>
-            <div class="achieveData"></div>
-            <div class="achieveData"></div>
+            <div class="achieveData">2022-09-09</div>
+            <div class="achieveData">2022-09-10</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData standby"></div>
           </button>
           <div class="achieveDropPanel">
             <div class="dropPanelData">
               <div class="dropPanelPlayers">
-                <p class="dropPanelCategory">Infromation</p>
+                <p class="dropPanelCategory">Information</p>
                 <p>Acetanzia <br> Blend <br> Dyorz <br> Sempy</p>
-                <p><a href="#">Image Gallery</a></p>
               </div>
               <div class="dropPanelLog">
                 <p class="dropPanelCategory">Log</p>
@@ -1117,6 +1152,40 @@
                   <tr>
                     <td>Sep. 09</td>
                     <td>Started the game.</td>
+                  </tr>
+                  <tr>
+                    <td>Sep. 10</td>
+                    <td>On Standby due to nobody wanting to continue. 
+                      All players were confused on the main goal.</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="dropPanelAwards">
+                <p class="dropPanelCategory">Awards</p>
+              </div>
+            </div>
+          </div>
+
+          <button class="achieveBoxes">
+            <div class="achieveData">Escape Simulator</div>
+            <div class="achieveData">2022-12-08</div>
+            <div class="achieveData">2022-12-08</div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData standby"></div>
+          </button>
+          <div class="achieveDropPanel">
+            <div class="dropPanelData">
+              <div class="dropPanelPlayers">
+                <p class="dropPanelCategory">Information</p>
+                <p>Acetanzia <br> Blend <br> Sempy</p>
+              </div>
+              <div class="dropPanelLog">
+                <p class="dropPanelCategory">Log</p>
+                <table class="logTable">
+                  <tr><td>2022</td><td><hr></td></tr>
+                  <tr>
+                    <td>Dec. 08</td>
+                    <td>Started the game. Standby on the same day due to connection issues.</td>
                   </tr>
                 </table>
               </div>
@@ -1131,15 +1200,14 @@
             <div class="achieveData">GAMENAME</div>
             <div class="achieveData">DATE</div>
             <div class="achieveData">DATE</div>
-            <div class="achieveData">DURATION</div>
-            <div class="achieveData"><i class="fa-solid fa-circle-pause"></i></div>
+            <div class="achieveData duration"></div>
+            <div class="achieveData ongoing"></div>
           </button>
           <div class="achieveDropPanel">
             <div class="dropPanelData">
               <div class="dropPanelPlayers">
-                <p class="dropPanelCategory">Infromation</p>
+                <p class="dropPanelCategory">Information</p>
                 <p>Acetanzia <br> Blend <br> Dyorz <br> Sempy</p>
-                <p><a href="#">Image Gallery</a></p>
               </div>
               <div class="dropPanelLog">
                 <p class="dropPanelCategory">Log</p>
@@ -1158,6 +1226,8 @@
           </div> -->
 
         </div>
+        <p id="lastUpdate" style="font-size: 0.8em;"></p>
+        <script>document.getElementById("lastUpdate").innerHTML = "Last Update: " + document.lastModified;</script>
       </section>
     </main>
     <footer>
@@ -1178,7 +1248,8 @@
           <span class="tooltip-text">Report a Problem</span></a>
         </li>
       </ul>
-      <p class="text-center">© 2022 JJJ</p>
+      <p class="text-center" id="copyright"></p>
+      <script>document.getElementById("copyright").innerHTML = "© " + new Date().getFullYear() + " JJJ"</script>
     </footer>
     <script src="../scripts/achieveScripts.js"></script>
   </body>
