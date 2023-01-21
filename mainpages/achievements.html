@@ -4,7 +4,7 @@
     <meta charset="utf-8" ame="viewport" content="width=device-width, initial-scale=1">
     <title>JJJ Website</title>
     <link rel="icon" type="image/x-icon" href="../images/jjj-logo.png">
-    <link rel="stylesheet" href="../main-styles.css">
+    <link rel="stylesheet" href="../globalStyles.css">
     <link rel="stylesheet" href="../styles/achievementStyles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen&family=Abel">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -12,33 +12,38 @@
     <script src="../scripts/achieveScripts.js"></script> 
   </head>
   <body onload="onloadFunctions()">
+    <header>
+      <nav>
+        <a href="../index.html"><img class="logo" src="../images/jjj-logo.png" alt="JJJ Logo"></a>
+        <h1>Achievements</h1>
+        <div class="socials">
+          <ul class="tooltip">
+            <li>
+              <a href="../index.html">
+              <i class="fa-solid fa-house"></i>
+              <p class="tooltip-text">Homepage</p></a>
+            </li>
+            <li>
+              <a href="https://discord.gg/npRN2KqTp8" target="_blank">
+              <i class="fa-brands fa-discord"></i>
+              <p class="tooltip-text">Discord</p></a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/channel/UCiwD3fusntkhfdU45G-_8GA" target="_blank">
+              <i class="fa-brands fa-youtube"></i>
+              <p class="tooltip-text">Youtube</p></a>
+            </li>
+            <li>
+              <a href="https://drive.google.com/drive/folders/1niYy2ZfIGwD9vCLXrpqZ0DC9jlTIdve1?usp=sharing" target="_blank">
+              <i class="fa-brands fa-google-drive"></i>
+              <p class="tooltip-text">Google Drive</p></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
     <main>
-      <header>
-        <nav>
-          <a href="../index.html"><img class="logo" src="../images/jjj-logo.png" alt="JJJ Logo"></a>
-          <h1>Achievements</h1>
-          <div class="socials">
-            <ul class="tooltip">
-              <li>
-                <a href="https://discord.gg/npRN2KqTp8" target="_blank">
-                <i class="fa-brands fa-discord"></i>
-                <p class="tooltip-text">Discord</p></a>
-              </li>
-              <li>
-                <a href="https://www.youtube.com/channel/UCiwD3fusntkhfdU45G-_8GA" target="_blank">
-                <i class="fa-brands fa-youtube"></i>
-                <p class="tooltip-text">Youtube</p></a>
-              </li>
-              <li>
-                <a href="https://drive.google.com/drive/folders/1niYy2ZfIGwD9vCLXrpqZ0DC9jlTIdve1?usp=sharing" target="_blank">
-                <i class="fa-brands fa-google-drive"></i>
-                <p class="tooltip-text">Google Drive</p></a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
-      <section class="primary-section">
+      <section class="primarySection">
         <div id="activeGamesBanner">
           <!-- Active Games Image must be 150w by 400h -->
           <!-- "../images/gameBannerEmpty.png" -->

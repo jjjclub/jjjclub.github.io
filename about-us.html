@@ -1,63 +1,142 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title>About Us</title>
+    <meta charset="utf-8" ame="viewport" content="width=device-width, initial-scale=1">
+    <title>JJJ Website</title>
     <link rel="icon" type="image/x-icon" href="images/jjj-logo.png">
-    <link rel="stylesheet" href="styles-v2.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen">
+    <link rel="stylesheet" href="globalStyles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen&family=Abel">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/9cc3415277.js" crossorigin="anonymous"></script>
+    <script src="../scripts/achieveScripts.js"></script> 
   </head>
   <body>
-    <nav>
-      <div class="menu">
+    <header>
+      <nav>
         <a href="index.html"><img class="logo" src="images/jjj-logo.png" alt="JJJ Logo"></a>
         <h1>About Us</h1>
-        <div class="flex-grow"></div> <!--Used to give space between the logo/title and social buttons -->
         <div class="socials">
-            <ul class="tooltip">
-              <li>
-                <a href="https://discord.gg/npRN2KqTp8" target="_blank">
-                <i class="fa-brands fa-discord"></i>
-                <span class="tooltiptext">Discord</span></a>
-              </li>
-              <li>
-                <a href="https://www.youtube.com/channel/UCiwD3fusntkhfdU45G-_8GA" target="_blank">
-                <i class="fa-brands fa-youtube"></i>
-                <span class="tooltiptext">Youtube</span></a>
-              </li>
-              <li>
-                <a href="https://drive.google.com/drive/folders/1niYy2ZfIGwD9vCLXrpqZ0DC9jlTIdve1?usp=sharing" target="_blank">
-                <i class="fa-brands fa-google-drive" target="_blank">
-                </i><span class="tooltiptext">Google Drive</span></a>
-              </li>
-            </ul>
+          <ul class="tooltip">
+            <li>
+              <a href="index.html">
+              <i class="fa-solid fa-house"></i>
+              <p class="tooltip-text">Homepage</p></a>
+            </li>
+            <li>
+              <a href="https://discord.gg/npRN2KqTp8" target="_blank">
+              <i class="fa-brands fa-discord"></i>
+              <p class="tooltip-text">Discord</p></a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/channel/UCiwD3fusntkhfdU45G-_8GA" target="_blank">
+              <i class="fa-brands fa-youtube"></i>
+              <p class="tooltip-text">Youtube</p></a>
+            </li>
+            <li>
+              <a href="https://drive.google.com/drive/folders/1niYy2ZfIGwD9vCLXrpqZ0DC9jlTIdve1?usp=sharing" target="_blank">
+              <i class="fa-brands fa-google-drive"></i>
+              <p class="tooltip-text">Google Drive</p></a>
+            </li>
+          </ul>
         </div>
-      </div>
-    </nav>
-    <article>
-      <p style="font-family:Silkscreen; color:#DDD964; text-align:center;">Currently in Construction</p>
-    </article>
+      </nav>
+    </header>
+    <main class="aboutUsMain">
+      <section class="aboutUsPrimary">
+        <h2>Our Story</h2>
+        <div>
+          <p>
+            JJJ was created during the COVID-19 Pandemic. During the lockdown at the time, the club founders 
+            formed the JJJ with a small group of friends. The main goal was to try to stay connected even at long distances
+            or differing schedules.
+          </p>
+          <p>
+            As time moved forward, some friends of friends decided to join. Our passion for videogames have become
+            the bridge in which we bond. Today, we strive to extend and facilitate this bond to other people. We are doing so
+            by developing an easy and effortless way of communicating (via discord) and storing our memories (via our website).
+          </p>
+          <p>Fun Fact! The three founding members noticed they all had J's in their real name. Thus, the JJJ Club was born.</p>
+        </div>
+        <div class="ourStaff">
+          <h2>J-Staff</h2>
+          <table>
+            <tr>
+              <td>@Sempy</td>
+              <td>Head Admin</td>
+            </tr>
+            <tr>
+              <td>@Acetanzia</td>
+              <td>Asst. Admin</td>
+            </tr>
+            <tr>
+              <td>@Blend</td>
+              <td>Asst. Admin</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+      <section>
+        <h2>History</h2>
+        <div class="historyContainer">
+          <div class="historyLine"></div>
+          <div class="historyContents">
+              <div class="historybullet">1</div>
+              <div class="historyItem">
+                  <p>January 13, 2021</p>
+                  <p>Creation of the JJJ Club and its Discord server.</p>
+              </div>
+          </div>
+          <div class="historyContents">
+              <div class="historybullet">2</div>
+              <div class="historyItem">
+                  <p>September 22, 2021</p>
+                  <p>Creation of the club's website and hosted on <a href="https://www.notion.so/">Notion</a>. </p>
+              </div>
+          </div>
+          <div class="historyContents">
+              <div class="historybullet">3</div>
+              <div class="historyItem">
+                  <p>December 27, 2021</p>
+                  <p>The club reached 20 concurrent members.</p>
+              </div>
+          </div>
+          <div class="historyContents">
+            <div class="historybullet">4</div>
+            <div class="historyItem">
+                <p>September 25, 2022</p>
+                <p>Overhauled the club's website and changed host to <a href="https://github.com/">Github</a>.<p>
+            </div>
+          </div>
+          <div class="historyContents">
+            <div class="historybullet">5</div>
+            <div class="historyItem">
+                <p>Next Milestone...</p>
+                <p>Reach 50 concurrent members.<p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <ul class="tooltip">
+        <li>
+          <a href="contact-us.html">
+          <i class="fa-solid fa-envelope"></i>
+          <span class="tooltip-text">Contact Us</span></a>
+        </li>
+        <li>
+          <a href="about-us.html">
+          <i class="fa-solid fa-users"></i>
+          <span class="tooltip-text">About Us</span></a>
+        </li>
+        <li>
+          <a href="https://forms.gle/c3qW1wx6KMNfFKTL9" target="_blank">
+          <i class="fa-solid fa-bug"></i>
+          <span class="tooltip-text">Report a Problem</span></a>
+        </li>
+      </ul>
+      <p class="text-center" id="copyright"></p>
+      <script>document.getElementById("copyright").innerHTML = "© " + new Date().getFullYear() + " JJJ"</script>
+    </footer>
   </body>
-  <footer class="footer">
-    <ul  class="tooltip">
-      <li>
-        <a href="contact-us.html">
-        <i class="fa-solid fa-envelope"></i>
-        <span class="tooltiptext">Contact Us</span></a>
-      </li>
-      <li>
-        <a href="about-us.html">
-        <i class="fa-solid fa-users"></i>
-        <span class="tooltiptext">About Us</span></a>
-      </li>
-      <li>
-        <a href="https://forms.gle/c3qW1wx6KMNfFKTL9" target="_blank">
-        <i class="fa-solid fa-bug"></i>
-        <span class="tooltiptext">Report a Problem</span></a>
-      </li>
-    </ul>
-    <p class="text-center">© 2022 JJJ</p>
-  </footer>
 </html>

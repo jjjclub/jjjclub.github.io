@@ -1,0 +1,397 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #161616;
+  color: #dcddde;
+  font-family: "Segoe UI";
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  padding-bottom: 2.5rem;
+}
+
+a {
+  color: #7965D5;
+  text-underline-offset: 4px;
+}
+
+a:hover {
+  color: #9D92D3;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  margin-left: 10%;
+  margin-right: 10%;
+  position: relative;
+  font-family: "Silkscreen";
+}
+
+nav h1 {
+  font-size: 2em;
+}
+
+.logo, .indexLogo {
+  width: 80px;
+  height: 80px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+.socials {
+  display: inherit;
+  align-items: inherit;
+  margin-left: auto;
+  text-align: center;
+  padding-left: 15px;
+}
+
+.socials h1 {
+  font-size: 1.1em;
+}
+
+.socials ul {
+  display: inherit;
+  align-items: inherit;
+  list-style: none;
+  padding-left: 10px;
+  padding-right: 20px;
+  font-size: 1.2em;
+}
+
+.socials li {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.socials li:first-child {
+  display: none;
+}
+
+main {
+  flex-grow: 1;
+}
+
+.primarySection {
+  margin-top: 30px;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-family: "Abel";
+  font-size: 1.2em;
+}
+
+footer {
+  margin: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: "Abel";
+}
+
+footer ul {
+  padding-left: 0px;
+  font-family: "Silkscreen";
+}
+
+footer li {
+  list-style: none;
+  margin: 0px 15px 0px 15px;
+}
+
+/* Not My Code */
+.tooltip li {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip li .tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  font-size: 0.7em;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 100%;
+  margin-left: -60px;
+}
+
+.tooltip li:hover .tooltip-text {
+  visibility: visible;
+}
+/* End of Not My Code */
+
+/* Homepage ================================================================ */
+
+.head-banner {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  opacity: 20%;
+  max-height: 100vh;
+}
+
+.temporary {
+  position: relative;
+  text-align: center;
+  font-family: "Silkscreen";
+  color: #DDD964;
+}
+
+.welcome {
+  font-family: "Silkscreen";
+  color: #DDD964;
+  text-align: center;
+  font-size: 2em;
+}
+
+.channelName {
+  background-color: #252638;
+  border-radius: 0.6em;
+  padding: 0.1em;
+}
+
+/* Page Selection ========================================================== */
+
+.indexPageSelection {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.indexPageSelection ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  row-gap: 1em;
+  padding-left: 0em;
+}
+
+.indexPageSelection li {
+  list-style: none;
+  margin-left: 1em;
+  margin-right: 1em;
+  padding: 0.7em;
+  font-size: 0.85em;
+  font-family: "Silkscreen";
+  background-color: #1D1D1D;
+  border-radius: 1em;
+}
+
+.indexPageSelection li:hover {
+  background-color: #282828;
+}
+
+.indexPageSelection a {
+  text-decoration: none;
+}
+
+.indexPageSelection .unavailable {
+  cursor: not-allowed;
+}
+
+.indexPageSelection hr {
+  margin-left: 5%;
+  margin-right: 5%;
+  opacity: 80%;
+  color: #282828;
+}
+
+/* Contact Us Page  ======================================================= */
+
+.contactUsMain {
+  display: flex;
+  column-gap: 3em;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+
+.contactUsMain h2, .serverRules h2 {
+  font-family: "Silkscreen";
+  color: #DDD964;
+  font-size: 1.2em;
+}
+
+.contacts {
+  width: 50%;
+}
+
+.staffApplication {
+  width: 50%;
+}
+
+.contacts td {
+  padding: 0.3em;
+}
+
+.contacts td:first-child {
+  text-align: center;
+}
+
+/* .serverRules {
+  
+} */
+
+/* About Us Page ========================================================== */
+
+.aboutUsMain {
+  display: flex;
+  column-gap: 3em;
+  margin-left: 15%;
+  margin-right: 15%;
+  font-family: "Abel";
+}
+
+.aboutUsMain p {
+  font-size: 1.2em;
+}
+
+.aboutUsMain h2 {
+  font-family: "Silkscreen";
+  color: #DDD964;
+}
+
+.aboutUsPrimary {
+  width: 65%;
+}
+
+.ourStaff table {
+  font-size: 1.2em;
+}
+
+.ourStaff th, .ourStaff td {
+  padding-right: 1.5em;
+  padding-bottom: 0.5em;
+}
+
+.historyContainer {
+  position:relative;
+  margin-bottom: 2em;
+}
+
+.historyLine {
+  background:#7965D5;
+  width:3px;
+  margin-left: -1px;
+  height:100%;
+  position:absolute;
+  left:15px;
+}
+
+.historyContents {
+  margin-top: 2em;
+  position:relative;
+}
+
+.historybullet {
+  float: left;
+  margin-right: 20px;
+  background-color: #7965D5;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  border-radius: 100%;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+}
+
+.historyItem {
+  display:table-row;
+}
+
+.historyItem p:first-child {
+  font-weight: bold;
+}
+
+.historyItem p{
+  margin: 0;
+}
+
+/* Mobile Responsive CSS ================================================== */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    margin-top: 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+  }
+
+  .logo, .indexLogo {
+    display: none;
+  }
+
+  .socials {
+    margin: auto;
+    margin-bottom: -1.5em;
+    padding-left: 0px;
+    font-size: 0.9em;
+    flex-direction: column;
+  }
+
+  .socials ul {
+    margin-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .socials li:first-child {
+    display: inline;
+  }
+
+  .primarySection {
+    margin-left:10%;
+    margin-right:10%;
+  }
+
+  /* Page Selection Responsive CSS ============================== */
+
+  .indexPageSelection li {
+    font-size: 0.65em;
+  }
+
+  .indexPageSelection ul {
+    margin-top: 1.5em;
+  }
+
+  .contactUsMain {
+    flex-direction: column;
+  }
+  
+  /* Contact Us Responsive CSS ================================= */
+
+  .contacts {
+    width: 100%;
+  }
+
+  .staffApplication {
+    width: 100%;
+  }
+
+  /* About Us Responsive CSS =================================== */
+  .aboutUsMain {
+    flex-wrap: wrap;
+  }
+
+  .aboutUsPrimary {
+    width: 100%;
+  }
+}

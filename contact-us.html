@@ -1,63 +1,111 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title>Contact Us</title>
+    <meta charset="utf-8" ame="viewport" content="width=device-width, initial-scale=1">
+    <title>JJJ Website</title>
     <link rel="icon" type="image/x-icon" href="images/jjj-logo.png">
-    <link rel="stylesheet" href="styles-v2.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen">
+    <link rel="stylesheet" href="globalStyles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Silkscreen&family=Abel">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/9cc3415277.js" crossorigin="anonymous"></script>
+    <script src="../scripts/achieveScripts.js"></script> 
   </head>
   <body>
-    <nav>
-      <div class="menu">
+    <header>
+      <nav>
         <a href="index.html"><img class="logo" src="images/jjj-logo.png" alt="JJJ Logo"></a>
         <h1>Contact Us</h1>
-        <div class="flex-grow"></div> <!--Used to give space between the logo/title and social buttons -->
         <div class="socials">
-            <ul class="tooltip">
-              <li>
-                <a href="https://discord.gg/npRN2KqTp8" target="_blank">
-                <i class="fa-brands fa-discord"></i>
-                <span class="tooltiptext">Discord</span></a>
-              </li>
-              <li>
-                <a href="https://www.youtube.com/channel/UCiwD3fusntkhfdU45G-_8GA" target="_blank">
-                <i class="fa-brands fa-youtube"></i>
-                <span class="tooltiptext">Youtube</span></a>
-              </li>
-              <li>
-                <a href="https://drive.google.com/drive/folders/1niYy2ZfIGwD9vCLXrpqZ0DC9jlTIdve1?usp=sharing" target="_blank">
-                <i class="fa-brands fa-google-drive" target="_blank">
-                </i><span class="tooltiptext">Google Drive</span></a>
-              </li>
-            </ul>
+          <ul class="tooltip">
+            <li>
+              <a href="index.html">
+              <i class="fa-solid fa-house"></i>
+              <p class="tooltip-text">Homepage</p></a>
+            </li>
+            <li>
+              <a href="https://discord.gg/npRN2KqTp8" target="_blank">
+              <i class="fa-brands fa-discord"></i>
+              <p class="tooltip-text">Discord</p></a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/channel/UCiwD3fusntkhfdU45G-_8GA" target="_blank">
+              <i class="fa-brands fa-youtube"></i>
+              <p class="tooltip-text">Youtube</p></a>
+            </li>
+            <li>
+              <a href="https://drive.google.com/drive/folders/1niYy2ZfIGwD9vCLXrpqZ0DC9jlTIdve1?usp=sharing" target="_blank">
+              <i class="fa-brands fa-google-drive"></i>
+              <p class="tooltip-text">Google Drive</p></a>
+            </li>
+          </ul>
         </div>
-      </div>
-    </nav>
-    <article>
-      <p style="font-family:Silkscreen; color:#DDD964; text-align:center;">Currently in Construction</p>
-    </article>
-  </body>
-  <footer class="footer">
-    <ul  class="tooltip">
-      <li>
-        <a href="contact-us.html">
-        <i class="fa-solid fa-envelope"></i>
-        <span class="tooltiptext">Contact Us</span></a>
-      </li>
-      <li>
-        <a href="about-us.html">
-        <i class="fa-solid fa-users"></i>
-        <span class="tooltiptext">About Us</span></a>
-      </li>
-      <li>
-        <a href="https://forms.gle/c3qW1wx6KMNfFKTL9" target="_blank">
-        <i class="fa-solid fa-bug"></i>
-        <span class="tooltiptext">Report a Problem</span></a>
-      </li>
-    </ul>
-    <p class="text-center">© 2022 JJJ</p>
-  </footer>
+      </nav>
+    </header>
+    <main>
+      <section class="primarySection">
+        <div class="contactUsMain">
+          <div class="contacts">
+            <h2>Contact Mediums</h2>
+            <p>You may reach us in the following mediums below:</p>
+            <table>
+              <tr>
+                <td><i class="fa-solid fa-envelope"></i></td>
+                <td>jjjclub2021@gmail.com</td>
+              </tr>
+              <tr>
+                <td><i class="fa-brands fa-discord"></i></td>
+                <td><span class="channelName">#general</span> channel</td>
+              </tr>
+            </table>
+            <p>If you wish to see what we are up to next, check out our <a href="https://trello.com/b/5YX3iak4/jjj-club" target="_blank">Development Road Map</a>.</p>
+          </div>
+          <div class="staffApplication">
+            <h2>Staff Application</h2>
+            <!-- <p style="font-weight: bold;">Admin: 1 Slot</p>
+            <ul>
+              <li>Been a member of the club for at least 6 months.</li>
+              <li>Proficient in Discord.</li>
+              <li>No deliquencies during your stay in the club.</li>
+              <li>Experience in Web Development is a plus.</li>
+              <li>Cooperative yet can work independently.</li>
+            </ul> -->
+            <!-- <p style="font-weight: bold;">Moderator: 1 Slot</p>
+            <ul>
+              <li>Been a member of the club for at least 3 months.</li>
+              <li>Proficient in Discord.</li>
+              <li></li>
+            </ul> -->
+            <!-- <p>Application period is from DATE to DATE. Send your applications <a href="">here</a>.</p> -->
+            <p>Unfortunately, we are not taking any application for staff positions at the moment.</p>
+            <p>We'll post it here and announce it in the <span class="channelName">#announcement</span> 
+              channel if positions open up in the future.</p>
+          </div>
+        </div>
+        <div class="serverRules">
+          <h2>Server Rules</h2>
+          <p>Server Rules are currently being overhauled. Previous rules still applies until the new ones are published.</p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <ul class="tooltip">
+        <li>
+          <a href="contact-us.html">
+          <i class="fa-solid fa-envelope"></i>
+          <span class="tooltip-text">Contact Us</span></a>
+        </li>
+        <li>
+          <a href="about-us.html">
+          <i class="fa-solid fa-users"></i>
+          <span class="tooltip-text">About Us</span></a>
+        </li>
+        <li>
+          <a href="https://forms.gle/c3qW1wx6KMNfFKTL9" target="_blank">
+          <i class="fa-solid fa-bug"></i>
+          <span class="tooltip-text">Report a Problem</span></a>
+        </li>
+      </ul>
+      <p class="text-center" id="copyright"></p>
+      <script>document.getElementById("copyright").innerHTML = "© " + new Date().getFullYear() + " JJJ"</script>
+    </footer>
 </html>
